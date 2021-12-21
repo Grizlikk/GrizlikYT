@@ -31,7 +31,7 @@ goto e
 cls
 color 4
 echo =================================================
-echo        Vasi cislo %cislo% je spravne!!!
+echo        Vase cislo %cislo% je spravne!!!
 echo      Podarilo se vam jej uhodnout na %i% pokusu
 echo =================================================
 echo .
