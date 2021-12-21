@@ -12,4 +12,6 @@ V některých videích jsem vytvářel i malware, který může poškodit váš 
 ### Informace:
 **Tento GitHub je zatím velice nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo, nebo jste měli nějaký problém, můžete mi napsat zde, nebo na email: *grizlik.smajlik@gmail.com*
 
+Některé programy můžou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a najspíš je už nebudu měnit.
+
 *Heslo ke všem zazipovaným souborům je **Grizlik***.
