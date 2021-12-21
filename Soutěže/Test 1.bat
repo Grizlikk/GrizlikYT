@@ -9,7 +9,7 @@ if %heslo% == 8165709524941 (cls
     color 2
     echo GRATULUJI!!! Podarilo se vam zadat spravne heslo!
     timeout /t 3 > nul
-    start https://www.youtube.com/watch?v=dQw4w9WgXcQ
+    start https://www.youtube.com/watch?v=iik25wqIuFo
     exit) else (cls
         echo SPATNE HESLO!!!
         echo SPATNE HESLO!!!
