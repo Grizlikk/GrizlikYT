@@ -1,11 +1,11 @@
 # Grizlik :D YouTube
-### Obsah:
 ***Vítám všechny na mém GitHubu! :D***
+### Obsah:
 
 Zde ve složce **Videa** naleznete soubory, které používám nebo vysvětluji ve videích na svém YouTube kanále. Pokud si tedy chcete soubory vyzkoušet sami, nebo si prohlédnout jejich zdrojový kód, tak zde jsou všechny na jednom místě a zdarma ke stažení.
 
 ### Varování:
-V některých videích jsem vytvářel i malware, který dovede poškodit počítač. Proto nedoporučuji takovéto soubory spouštět na skutečném počítči (takže ani ve škole), nepoužívat je k prankům na kamarády a vždy používat nějaké vhodné testovací prostředí. *Malware není hračka! Přestože jsou soubory jednoduché, tak to neznamená, že jsou neškodné!*.
+V některých videích jsem vytvářel i malware, který dovede poškodit počítač. Proto nedoporučuji takovéto soubory spouštět na skutečném počítči (takže ani ve škole), nepoužívat je k prankům na kamarády a vždy používat nějaké vhodné testovací prostředí. *Malware není hračka! Přestože jsou soubory jednoduché, tak to neznamená, že jsou neškodné!*
 
 **Pokud i přes tohle varování škodlivé soubory spustíte na vašem a nebo cizím počítači, neberu si žádnou zodpovědnost za případné škody!**
 
