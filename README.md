@@ -1,6 +1,7 @@
 # Grizlik :D YouTube
-***Vítám všechny na mém GitHubu! :D***
 ### Obsah:
+
+***Vítám všechny na mém GitHubu! :D***
 
 Zde ve složce **Videa** naleznete soubory, které používám nebo vysvětluji ve videích na svém YouTube kanále. Pokud si tedy chcete soubory vyzkoušet sami, nebo si prohlédnout jejich zdrojový kód, tak zde jsou všechny na jednom místě a zdarma ke stažení.
 
