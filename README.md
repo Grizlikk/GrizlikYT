@@ -11,7 +11,7 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 **Pokud i přes tohle varování škodlivé soubory spustíte na vašem a nebo cizím počítači, neberu si žádnou zodpovědnost za případné škody!**
 
 ### Informace:
-**Tento GitHub je zatím velice nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo, nebo jste měli nějaký problém, můžete mi napsat zde, nebo na email: *grizlik.smajlik@gmail.com*
+**Tento GitHub je zatím velice nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo, nebo jste měli nějaký problém, můžete mi napsat zde, do komentářů na YouTube, nebo na email: *grizlik.smajlik@gmail.com*
 
 Některé zde nasdílené programy mohou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a najspíš je už ani nebudu měnit.
 
