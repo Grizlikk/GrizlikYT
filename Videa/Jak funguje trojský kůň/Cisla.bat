@@ -1,3 +1,4 @@
+::Soubor, který se vydává za hru o hádání čísel, i když na pozadí spustí trojský kůň
 @echo off
 color e
 echo =================================================
