@@ -15,4 +15,4 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 
 Některé zde nasdílené programy mohou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a nejspíš je už ani nebudu měnit.
 
-*Heslo ke všem zazipovaným souborům je **Grizlik***.
+*Heslo ke všem zazipovaným souborům je **grizlik***.
