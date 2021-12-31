@@ -15,6 +15,6 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 
 Některé zde nasdílené programy mohou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a nejspíš je už ani nebudu měnit.
 
-Složky ve složce *Videa* mají vždy stejný název, jako video ze kterého soubory pochází (případně bez speciálních znaků, jako třeba ?). Pokud byste tedy nějakou složku nemohli najít, tak se podívejte na název videa a poté složku můžete vyhledat podle abecedy.
+Složky ve složce *Videa* mají vždy stejný název, jako video ze kterého soubory pochází (případně bez speciálních znaků, jako třeba otazník). Pokud byste tedy nějakou složku nemohli najít, tak se podívejte na název videa a poté složku můžete vyhledat podle abecedy.
 
 *Heslo ke všem zazipovaným souborům je **grizlik***.
