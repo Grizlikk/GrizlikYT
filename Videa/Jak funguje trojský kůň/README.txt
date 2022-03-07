@@ -1,0 +1,2 @@
+Tento program se tváří jako hra o hádání čísel (soubor "Cisla.bat"), i když po startu programu zničí počítač vymazáním složky System32 (soubor "Death.bat").
+Program je nastavený na převedení do formátu .exe, proto nebude originální .bat program fungovat správně, slouží pouze k ukázce zdrojového kódu.
