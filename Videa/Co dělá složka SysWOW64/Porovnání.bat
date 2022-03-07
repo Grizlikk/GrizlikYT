@@ -10,7 +10,7 @@ exit
 
 :next
 echo Probiha porovnavani...
-::V pomocné složce se vytvoří soubory se stejnými názvemy .txt
+::V pomocné složce se vytvoří soubory se stejnými názvy .txt
 forfiles /c "cmd /c if @isdir==FALSE if exist c:\windows\system32\@file echo :D > c:\users\%username%\desktop\stejne\@fname.txt"
 
 cls
