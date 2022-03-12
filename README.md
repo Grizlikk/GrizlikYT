@@ -16,6 +16,6 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 Některé zde nasdílené programy mohou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a nejspíš je už ani nebudu měnit.
 
 ### Můj Discord:
-Přímo v této hlavní složce se nachází soubor *Discord.bat*, tento soubor slouží jako "challenge", pokud se chcete dostat na můj Discord. Soubor obsahuje zdrojový kód .bat souboru, ze kterého musíte zjistit správné heslo (odkaz).
+Přímo v této hlavní složce se nachází soubor *Discord.bat*. Tento soubor slouží jako "challenge", pokud se chcete dostat na můj Discord. Soubor obsahuje zdrojový kód .bat souboru, ze kterého musíte zjistit správné heslo (odkaz).
 
 *Heslo ke všem zazipovaným souborům je **grizlik***.
