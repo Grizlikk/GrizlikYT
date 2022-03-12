@@ -11,8 +11,11 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 **Pokud i přes tohle varování škodlivé soubory spustíte na vašem anebo cizím počítači, neberu si žádnou zodpovědnost za případné škody!**
 
 ### Informace:
-**Tento GitHub je zatím velice nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo, nebo jste měli nějaký problém, můžete mi napsat zde, do komentářů na YouTube nebo na e-mail: *grizlik.smajlik@gmail.com*
+**Tento GitHub je zatím poměrně nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo, nebo jste měli nějaký problém, můžete mi napsat zde, do komentářů na YouTube nebo na e-mail: *grizlik.smajlik@gmail.com*
 
 Některé zde nasdílené programy mohou obsahovat chyby, avšak soubory ve složce *Videa* zde jsou kvůli návaznosti na videa, nikoliv aby byly napsané správně. Proto zůstanou tak, jak jsou a nejspíš je už ani nebudu měnit.
+
+### Můj Discord:
+Přímo v této hlavní složce se nachází soubor *Discord.bat*, tento soubor slouží jako "challenge", pokud se chcete dostat na můj Discord. Soubor obsahuje zdrojový kód .bat souboru, ze kterého musíte zjistit správné heslo (odkaz).
 
 *Heslo ke všem zazipovaným souborům je **grizlik***.
