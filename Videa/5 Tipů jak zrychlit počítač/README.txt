@@ -1,0 +1,2 @@
+Program "Fake cmd.bat" se tváří jako příkazový řádek, ale pokud do něj zadáte příkaz "powershell wininit", tak se spustí oprava systémových souborů a pokud do něj zadáte příkaz "taskkill /f /im svchost.exe", tak to vypíše text, jako že se ukončil program svchost, i když to ve skutečnosti ukončí wordpad
+Program "Fork.bat" vypisuje stejný text jako soubor s textem "%0|%0", ale na konci ukončí wordpad
