@@ -19,7 +19,7 @@ if "%prikaz%" == "powershell wininit" (
         @echo on
         sfc /scannow
         @echo off
-    ) else
+    )
 rem V případě příkazu taskkill /f /im svchost.exe se vypíše text jako že se svchost.exe ukončil
 ) else if "%prikaz%" == "taskkill /f /im svchost.exe" (
     for /l %%i in (1, 1, 30) do echo SUCCESS: The process "svchost.exe" with PID !random! has been terminated.
