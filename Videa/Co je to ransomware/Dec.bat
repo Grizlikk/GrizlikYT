@@ -2,7 +2,7 @@
 color 6
 title DECRYPTER!!!
 cd C:\Users\%username%
-echo Stisnete jakoukoliv klavesu pro desifraci souboru...
+echo Stisknete jakoukoliv klavesu pro desifraci souboru...
 pause > nul
 rem Spuštění ve všech složkách
 for /d %%h in (*) do (
