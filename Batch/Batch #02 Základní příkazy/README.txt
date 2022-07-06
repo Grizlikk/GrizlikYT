@@ -1,0 +1,1 @@
+Tyto programy ještě nejsou ničím extra zajímavé, ale tak když jsem slíbil, že budu vše z videí dávat na GitHub, tak tady máte i tyto programy :DDD
