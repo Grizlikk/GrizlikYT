@@ -1,0 +1,9 @@
+cd /
+cd Users
+cd Grizlik
+cd Desktop
+md slozka
+cd /
+cd Windows
+cd System32
+md Slozka
