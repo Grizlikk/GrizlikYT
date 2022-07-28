@@ -1,1 +1,0 @@
-Pro každé video do série tutoriálů na batch je zde samostatná složka se soubory z videa. Rozhodl jsem se dávat tyto soubory do jiné složky než do složky Videa, jelikož by tam potom polovina složek byly pouze tutoriály na batch :D
