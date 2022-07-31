@@ -13,7 +13,7 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 ### Můj Discord:
 Přímo v této hlavní složce se nachází soubor *Discord.bat*. Tento soubor slouží jako "challenge", pokud se chcete dostat na můj Discord. Soubor obsahuje zdrojový kód .bat souboru, ze kterého musíte zjistit správné heslo (odkaz).
 
-### Batch
+### Batch:
 Ve složce **Batch** naleznete soubory z mých tutoriálů na programování v jazyce batch. Kdybych vše dal do složky *Videa*, tak by to bylo dost nepřehledné, a proto jsem na batch tutoriály vytvořil vlastní složku.
 
 ### Informace:
