@@ -1,0 +1,49 @@
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(Obrazky/github.png);
+    background-color: beige;
+    margin-left: 6.9%;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    font-size: 69px;
+    text-align: center;
+}
+h2 {
+    font-size: 420%;
+}
+h3 {
+    font-size: 12.8mm;
+    margin: -6.9px -6.9px;
+}
+p {
+    font-size: 6.9mm;
+}
+.obr1 {
+    float:right;
+    width: 12.8%;
+    height: 12.8%;
+}
+.obr2{
+    float: left;
+    width: 69mm;
+    height: 420px;
+}
+.obr3{
+    float: left;
+    width: 420px;
+    height: 128px;
+}
+.obr4{
+    display: block;
+    width: 69%;
+    height: 420px;
+    margin: 0 auto 0 auto;
+}
+.obr5{
+    float: right;
+    width: 128mm;
+    height: 69mm;
+}
