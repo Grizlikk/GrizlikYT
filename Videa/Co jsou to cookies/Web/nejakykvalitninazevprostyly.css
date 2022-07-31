@@ -1,0 +1,42 @@
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    margin-top: -12.8px;
+    text-align: center;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    font-size: 69px;
+}
+h2 {
+    position: absolute;
+    font-size: 12.8mm;
+    font-family: Arial, sans-serif;
+    margin-left: 6.9mm;
+    z-index: 1;
+}
+p {
+    padding: 69px 69px;
+    background-color: rgb(69, 69, 69);
+    opacity: 0.69;
+}
+pre {
+    margin-left: 6.9cm;
+    font-size: 6.9mm;
+}
+img {
+    position: absolute;
+    margin-top: 6.9mm;
+    z-index: 1;
+}
+.en {
+    padding: 10px 10px;
+    margin-left: 59%;
+}
+.cz {
+    margin-left: 69%
+}
+.sk {
+    margin-left: 79%;
+}
