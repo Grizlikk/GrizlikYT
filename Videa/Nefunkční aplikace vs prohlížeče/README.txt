@@ -1,2 +1,2 @@
-Stránka.htm je webová stránka obsahující odkaz na aplikace "Nic.exe". Tato aplikace se musí nacházet ve stejné složce, jinak soubor nebude fungovat. I nefunkční .exe aplikaci vám prohlížeč buď zablokuje nebo vás nechá ji stáhnout, podle typu prohlížeče
+Stránka.htm je webová stránka obsahující odkaz na aplikaci "Nic.exe". Tato aplikace se musí nacházet ve stejné složce, jinak soubor nebude fungovat. I nefunkční .exe aplikaci vám prohlížeč buď zablokuje nebo vás nechá ji stáhnout, podle typu prohlížeče
 Konečně soubor, který můžete v klidu vyzkoušet na vašem počítači :DDDDD
