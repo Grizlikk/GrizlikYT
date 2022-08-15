@@ -16,7 +16,7 @@ set /a r=%random%/8
 set /a r=%random%/100
 cls
 set /a i=1
-echo Nahodne cislo vylo vygenerovano, zadejte vas tip
+echo Nahodne cislo bylo vygenerovano, zadejte vas tip
 set /p cislo= Zadejte cislo: 
 :e
 cls
