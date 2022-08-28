@@ -1,0 +1,2 @@
+V souboru "Volné místo.txt" naleznete výsledky pokusu s instalací a odinstalací programů.
+Pokud byste měli zájem o program "Instalátor.bat" použitý ve videu, tak ten je umístěný ve složce: "Grizlikk\Batch\Instalátor 1.1.bat"
