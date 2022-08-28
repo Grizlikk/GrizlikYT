@@ -1,0 +1,19 @@
+Disk: 30,9 GB (33 216 307 200 B)
+-----------------
+Program files:       2,31 GB (2 485 928 229 B)  18 830 souborů,  2 480 složek
+Program files (x86): 1,71 GB (1 841 133 816 B)   2 100 souborů,    375 složek
+ProgramData:         1,19 GB (1 278 362 699 B)   1 882 souborů,    692 složek
+Temp:                0,81 GB   (856 383 563 B)   1 247 souborů,    735 složek
+Users:               1,33 GB (1 437 724 573 B)   5 689 souborů,  3 146 složek
+Windows:            16,0 GB (17 220 367 229 B) 227 688 souborů, 78 072 složek
+
+----------------
+
+Disk: 29,9 GB (32 207 536 128 B)
+----------------
+Program files:       2,30 GB (2 480 368 457 B)   18 724 souborů,  2 484 složek
+Program files (x86): 1,69 GB (1 824 858 927 B)    2 101 souborů,    380 složek
+ProgramData:         1,19 GB (1 284 278 225 B)    1 376 souborů,    755 složek
+Temp:                0,88 GB   (930 231 434 B)    1 825 souborů,    717 složek
+Users:               1,72 GB (1 852 973 925 B)    7 412 souborů,  3 415 složek
+Windows:            16,5 GB (17 765 145 116 B)  227 842 souborů, 78 057 složek
