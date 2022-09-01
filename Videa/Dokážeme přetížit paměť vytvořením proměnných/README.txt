@@ -1,0 +1,3 @@
+Tyto programy zaplní paměť RAM vytvořením obrovského množství proměnných.
+Program "RAM.bat" je udělaný v jazyce batch a běží opravdu pomalu, program "RAM.py" je udělaný v Pythonu, takže pro jeho spuštění musíte mít Python nainstalovaný a program "RAM.cpp" je zdrojový kód stejného programu v C++.
+Pro spuštění "RAM.cpp" musíte program nejdříve zkompilovat! A i kdybych nahrál už zkompilovaný .exe program, tak bez potřebných .dll knihoven byste ho na vašem počítači stejně nespustili, takže když tomu nerozumíte, tak soubor prostě ignorujte :D.
