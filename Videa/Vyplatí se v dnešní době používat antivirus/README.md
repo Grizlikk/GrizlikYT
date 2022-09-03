@@ -1,0 +1,3 @@
+Tento soubor není virus. Spustí fotku s názvem *"Fotka.jpg"* v dokumentech a následně bude spamovat zprávu *"Virus byl nalezen!"*<br>
+Pokud nenajde v dokumentech soubor s názvem *"Fotka.jpg"*, program se ukončí<br>
+Soubor s příponou .exe v zazipované složce, je pomocí speciálního znaku upraven tak, aby to vypadalo, že má příponu .jpg. Pokud budete mít vypnuté přípony souborů, tak se to nebude zobrazovat správně.

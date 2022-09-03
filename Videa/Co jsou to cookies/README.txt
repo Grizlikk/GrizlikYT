@@ -1,3 +1,0 @@
-Soubor "Webová stránka.htm" obsahuje odkaz na webovou stránku, která existuje ve 3 různých jazycích. Přepsáním odkazu v tomto souboru změníte stránku, která se vám po spuštění zobrazí.
-Soubor "Webová stránka s reklamami.htm" vás přesměruje na stránku obsahující 5 falešných reklam, které vás přesměrují na jiné webové stránky.
-Složka "Web" obsahuje soubory potřebné k fungování souboru "Webová stránka.htm" a složka "Web_reklamy" obsahuje soubory od "Webová stránka s reklamami.htm"

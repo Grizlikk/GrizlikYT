@@ -1,0 +1,3 @@
+Tento program hned po spuštění spustí 75krát Wordpad, následně tyto Wordpady ukončí, počká 2 sekundy a restartuje se<br>
+Pokud necháte program běžet delší dobu, tak uvidíte tzv. *memory leak*, tedy že už ukončené Wordpady stále zabírají místo v paměti<br>
+**POZOR!!!** Na slabších počítačích se soubor může zachovat jako fork bomba, tedy že přetíží počítač natolik, že bude nemožné tento program ukončit, proto jej spouštějte pouze v testovacím prostředí

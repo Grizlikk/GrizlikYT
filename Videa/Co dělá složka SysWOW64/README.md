@@ -1,0 +1,2 @@
+Tento program porovná obsah složek system32 a SysWOW64. Vypíše názvy souborů, které jsou v obou složkách stejné do složky s názvem "stejné" na ploše<br>
+*Program porovnává pouze soubory v hlavní složce SysWOW64, nikoliv však v ostatních podsložkách*
