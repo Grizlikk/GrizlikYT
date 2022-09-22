@@ -1,0 +1,2 @@
+Tento program vytvoří soubor a poté připisuje obsah toho souboru do toho samého souboru tak dlouho, než dojde místo na disku. Poté vytvoří další soubor a proces se opakuje
+Program působí velkou zátěž na disk, ale nijak nepoškozuje počítač, vytvořené soubory stačí z počítače vymazat, abyste místo zpět uvolnili
