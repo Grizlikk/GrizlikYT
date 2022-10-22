@@ -14,7 +14,7 @@ V některých videích jsem vytvářel i malware, který dovede poškodit počí
 Přímo v této hlavní složce se nachází soubor *Discord.bat*. Tento soubor slouží jako "challenge", pokud se chcete dostat na můj Discord. Soubor obsahuje zdrojový kód .bat souboru, ze kterého musíte zjistit správné heslo (odkaz).
 
 ### Batch:
-Ve složce **Batch** naleznete soubory z mých tutoriálů na programování v jazyce batch. Kdybych vše dal do složky *Videa*, tak by to bylo dost nepřehledné, a proto jsem na batch tutoriály vytvořil vlastní složku.
+Ve složce **Batch tutoriály** naleznete soubory z mých tutoriálů na programování v jazyce batch. Kdybych vše dal do složky *Videa*, tak by to bylo dost nepřehledné, a proto jsem na batch tutoriály vytvořil vlastní složku.
 
 ### Informace:
 **Tento GitHub je zatím poměrně nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo nebo jste měli nějaký problém, můžete mi napsat do komentářů na YouTube nebo na e-mail: *grizlik.smajlik@gmail.com*
