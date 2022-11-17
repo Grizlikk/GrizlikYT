@@ -1,6 +1,6 @@
 ## Výsledky z videa:
 
-Rychlosti načítání uživatelského profilu (plochy) po restartu počítače a rychlost restartování průzkumníku souborů v případě různého zaplnění plochy
+***Rychlosti načítání uživatelského profilu (plochy) po restartu počítače a rychlost restartování průzkumníku souborů v případě různého zaplnění plochy***
 
 ### Prázdná plocha:
 
