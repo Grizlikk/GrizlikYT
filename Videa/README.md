@@ -3,7 +3,7 @@
 
 V této složce naleznete všechny soubory, které jsem použil ve videích na mém YouTube kanále. Pro každé video je zde samostatná složka, která má název toho videa a v ní jsou všechny soubory (a složky) použité ve videu.
 
-Pokud hledáte soubory k videím do série na Batch, tak ty naleznete o složku zpět ve složce **[Batch](https://github.com/Grizlikk/GrizlikYT/tree/noice/Batch)**:
+Pokud hledáte soubory k videím do série na Batch, tak ty naleznete o složku zpět ve složce **[Batch](https://github.com/Grizlikk/GrizlikYT/tree/noice/Batch)**
 
 ### Chyby souborů:
 Jakékoliv dotazy, opravy chyb nebo nefunkční soubory mi pište nejlépe do komentářů na YouTube. Napřed se ale přesvědčte, že chyba je opravdu u mě, a ne u vás, takže zde jsou problémy, na které byste mohli narazit:
