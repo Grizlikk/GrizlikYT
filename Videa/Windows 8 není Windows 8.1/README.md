@@ -1,1 +1,0 @@
-Pokud hledáte programy **Vysílač.bat** a **Přijímač.bat**, tak ty jsou recyklované z videa o rozdílech mezi 32 a 64 bitovým Windowsem, takže je najdete právě ve složce: **[Rozdíl mezi 32 a 64 bitovým Windowsem](https://github.com/Grizlikk/GrizlikYT/tree/noice/Videa/Rozd%C3%ADl%20mezi%2032%20a%2064%20bitov%C3%BDm%20Windowsem)**
