@@ -1,32 +1,67 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <title>Informace - Seznam verzí</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Informace - Seznam verzí</title>
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+    </head>
 
-<body>
-    <!--Navigační panel-->
-    <div class="horni-panel">
-        <a href="../index.htm"><button>Hlavní stránka</button></a>
-        <a href="../videa.htm"><button>Videa</button></a>
-        <a href="../prikazy.htm"><button>Příkazy</button></a>
-        <a href="../programy.htm"><button>Programy</button></a>
-        <a href="../informace.htm"><button>Informace</button></a>
-        <a href="../faq.htm"><button>FAQ</button></a>
-        <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
-    </div>
+    <body>
+        <!--Navigační panel-->
+        <div class="panel">
+            <a href="../index.htm"><button>Hlavní stránka</button></a>
+            <a href="../videa.htm"><button>Videa</button></a>
+            <a href="../prikazy.htm"><button>Příkazy</button></a>
+            <a href="../programy.htm"><button>Programy</button></a>
+            <a href="../informace.htm"><button>Informace</button></a>
+            <a href="../faq.htm"><button>FAQ</button></a>
+            <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
+            <a href="../o-kanale.htm"><button>O kanále</button></a>
+        </div>
 
-    <h1>Verze</h1>
-    <h2>1.0</h2>
-    <h3>Novinky:</h3>
-    <ul class="verze">
-        <li>Vytvoření základní struktury stránky</li>
-    </ul>
-    <h3>Změny:</h3>
-    <ul class="verze">
-        <li></li>
-    </ul>
+        <!--Nadpis-->
+        <h1>Verze</h1>
 
-</body>
+        <!--Aktuální verze-->
+        <h2 class="aktualni-verze">1.1</h2>
+        <h3>Novinky:</h3>
+        <ul class="verze">
+            <li>Přidání nové stránky <a href="../o-kanale.htm">O kanále</a></li>
+            <li>Přidání patičky stránek</li>
+        </ul>
+        <h3>Změny:</h3>
+        <ul class="verze">
+            <li>Aktuální verze se v tomto seznamu zobrazuje větším písmem</li>
+            <li>Odkaz na GitHub v části <a href="../informace.htm">Informace</a> nyní vede do složky <b>Batch Web</b> a otevírá se v novém okně</li>
+        </ul>
+        <h3>Opravy:</h3>
+        <ul class="verze">
+            <li>Opraven nadpis stránky na stránce o příkazu <a href="../prikazy/echo.htm">echo</a></li>
+        </ul>
+        <br /><br /><br />
+
+        <!--Verze 1.0-->
+        <h2>1.0</h2>
+        <h3>Novinky:</h3>
+        <ul class="verze">
+            <li>Vytvoření základní struktury stránky</li>
+        </ul>
+        <h3>Změny:</h3>
+        <ul class="verze">
+            <li>###</li>
+        </ul>
+        <h3>Opravy:</h3>
+        <ul class="verze">
+            <li>###</li>
+        </ul>
+
+        <!--Paticka-->
+        <br />
+        <footer class="panel">
+            <div>
+                <p>&copy; 2022 <a href="https://www.youtube.com/@GrizlikD">Grizlik :D</a> Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

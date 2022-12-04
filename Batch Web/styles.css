@@ -54,7 +54,7 @@ div {
 
 
 /* Nastevení pro zobrazení horního panelu tlačítek */
-.horni-panel {
+.panel {
     padding: 10px 10px;
     margin: 0px -80px 0 -80px;
     background-color: rgb(0, 0, 0, 0.5);
@@ -93,4 +93,11 @@ button:hover {
 .verze {
     font-size: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.aktualni-verze {
+    font-size: 125px;
+}
+.uprostred {
+    text-align: center;
+    margin: auto;
 }

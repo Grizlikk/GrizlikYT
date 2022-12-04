@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <title>BATCH - PRO VÝVOJÁŘE</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        <!--Navigační panel-->
+        <div class="horni-panel">
+            <a href="index.htm"><button>Hlavní stránka</button></a>
+            <a href="videa.htm"><button>Videa</button></a>
+            <a href="prikazy.htm"><button>Příkazy</button></a>
+            <a href="programy.htm"><button>Programy</button></a>
+            <a href="informace.htm"><button>Informace</button></a>
+            <a href="faq.htm"><button>FAQ</button></a>
+            <a href="vyvojari.htm"><button class="aktualni">Pro vývojáře</button></a>
+        </div>
+
+        <!--Úvod stránky-->
+        <h1>PRO VÝVOJÁŘE</h1>
+        <h2>Pokud se chceš jakkoliv podílet na vývoji stránky, tak jsi na správném místě!</h2>
+
+        <h3>Kompletní kód stránky je ke stažení zde: <a href="grizlik-batch.zip">grizlik-batch.zip</a></h3>
+        <br />
+
+        <!--Pro začátečníky-->
+        <h3>Pokud absolutně neumíte programovat webové stránky, zde máte naprosto základní návod, abyste se i vy mohli podílet na vývoji: <a href="vyvojari-z.htm">Pro začátečníky</a></h3>
+        <!--Obecný obsah stránky-->
+        <h3>Obecný popis fungování celé stránky:</h3>
+        <p>V hlavním adresáři stránky jsou soubory <b>index.htm</b> (Hlavní stránka) a každá z hlavních kategorií má zde vlastní .htm soubor.</p>
+        <p>Každý odkaz ze stránek, jako např. odkazy k vysvětlení příkazů, vedou do příslušné složky a do .htm souboru v této složce, který používá stejnou šablonu stylů, neboli <b>styles.css</b> v hlavní složce.</p>
+        <p>Všechny obrázky jsou zatím ve složce <b>obrazky</b>, ale pokud by obrázků mělo být více, tak asi do každé složky přidáme samostatnou složku na obrázky</p>
+        <br />
+
+        <!--Hlavní stránky-->
+        <h3>Vytváření hlavních stránek:</h3>
+        <p>Pro vytvoření nové hlavní stránky stačí v vytvořit soubor s příponou (.htm) a nějakým názvem, <b><i>který pište malými písmeny a bez mezer!!!</i></b></p>
+        <p>Na začátek každé stránky je potřeba zkopírovat navigační panel, takže tam vložte tuto šablonu:</p>
+
+        <!--Šablona pro hlavní stránku-->
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html lang="cs"&#62;
+    &#60;head&#62;
+        &#60;meta charset="UTF-8"&#62;
+        &#60;title&#62;BATCH - <b>[Název stránky]</b>&#60;/title&#62;
+        &#60;link rel="stylesheet" type="text/css" href="styles.css"&#62;
+    &#60;/head&#62;
+    
+    &#60;body&#62;
+        &#60;!--Navigační panel--&#62;
+        &#60;div class="horni-panel"&#62;
+            &#60;a href="index.htm"&#62;&#60;button&#62;Hlavní stránka&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="videa.htm"&#62;&#60;button&#62;Videa&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="prikazy.htm"&#62;&#60;button&#62;Příkazy&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="programy.htm"&#62;&#60;button&#62;Programy&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="informace.htm"&#62;&#60;button&#62;Informace&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="faq.htm"&#62;&#60;button&#62;FAQ&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="vyvojari.htm"&#62;&#60;button&#62;Pro vývojáře&#60;/button&#62;&#60;/a&#62;
+        &#60;/div&#62;
+        
+        &#60;!--Sem napište kód stránky--&#62;
+        
+    &#60;/body&#62;
+    &#60;/html&#62;
+        </code></pre>
+        <p>Navigační panel upravte podle potřeby a do značky &#60;button&#62; přidejte u aktuální stránky text: <code>class="aktualni"</code></p>
+        <br />
+
+        <!--Další stránky-->
+        <h3>Vytváření ostatních stránek:</h3>
+        <p>Pokud chcete vytvořit pouze podstránku (tedy stránku, která nebude mít svůj odkaz na horním navigačním panelu), tak postupujte podobně</p>
+        <p>Vytvořte soubor stránky v požadované složce s příponou .htm a názvem, <b><i>který bude napsán malými písmeny a bez mezer!!!</i></b></p>
+        <p>Se šablonou už bude trochu větší problém, protože v případě, že bude stránka v nějaké z podsložek, tak musíte odkazovat vždy o složku zpět, obecná šablona je zde:</p>
+
+        <!--Šablona pro stránky v podsložkách-->
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html lang="cs"&#62;
+    &#60;head&#62;
+        &#60;meta charset="UTF-8"&#62;
+        &#60;title&#62;<b>[Podkategorie]</b> - <b>[Název stránky]</b>&#60;/title&#62;
+        &#60;link rel="stylesheet" type="text/css" href="../styles.css"&#62;
+    &#60;/head&#62;
+    
+    &#60;body&#62;
+        &#60;!--Navigační panel--&#62;
+        &#60;div class="horni-panel"&#62;
+            &#60;a href="../index.htm"&#62;&#60;button&#62;Hlavní stránka&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../videa.htm"&#62;&#60;button&#62;Videa&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../prikazy.htm"&#62;&#60;button&#62;Příkazy&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../programy.htm"&#62;&#60;button&#62;Programy&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../informace.htm"&#62;&#60;button&#62;Informace&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../faq.htm"&#62;&#60;button&#62;FAQ&#60;/button&#62;&#60;/a&#62;
+            &#60;a href="../vyvojari.htm"&#62;&#60;button&#62;Pro vývojáře&#60;/button&#62;&#60;/a&#62;
+        &#60;/div&#62;
+    
+        &#60;!--Sem napište kód stránky--&#62;
+
+    &#60;/body&#62;
+        </code></pre>
+        <p>Tentokrát nenastavujte žádnou značku &#60;button&#62; jako aktuální!</p>
+        <p>Pokud by se stránka nenacházela v přesně jedné podsložce (byla by přímo v hlavní složce, nebo ve více než jedné posložce), tato šablona nebude fungovat a musíte ji upravit!</p>
+
+        <!--Šablony-->
+        <h2>Šablony:</h2>
+
+        <!--FAQ-->
+        <h3>Šablona pro přidání nové položky do FAQ:</h3>
+        <pre><code>
+    &#60;li&#62;&#60;h3&#62;<b>[Otázka]</b>&#60;/h3&#62;&#60;/li&#62;
+    &#60;ul&#62;
+        &#60;li&#62;&#60;h4&#62;<b>[Odpověď]</b>&#60;/h4&#62;&#60;/li&#62;
+    &#60;/ul&#62;
+        </code></pre>
+
+        <!--Video-->
+        <h3>Šablona pro zobrazení YouTube videa:</h3>
+        <pre><code>
+    &#60;div&#62;&#60;embed width="720" height="405" src="https://www.youtube.com/embed/<b>[Kód videa]</b>" allow="fullscreen"&#62;&#60;/iframe&#62;&#60;/div&#62;
+        </code></pre>
+        <p>Kód je videa je to, co je v odkazu za <b>?v=</b>, takže například: <b>dQw4w9WgXcQ</b></p>
+        <p>Ale proč nefunguje to <b>allow="fullscreen"</b>???</p>
+
+        <!--Nová verze-->
+        <h3>Šablona pro přidání nové verze do <a href="stare_verze/seznam-verzi.htm">seznamu verzí</a></h3>
+        <pre><code>
+    &#60;h2&#62;<b>[Verze]</b>&#60;/h2&#62;
+    &#60;h3&#62;Novinky:&#60;/h3&#62;
+    &#60;ul class="verze"&#62;
+        &#60;li&#62;<b>[Novinky]</b>&#60;/li&#62;
+    &#60;/ul&#62;
+    &#60;h3&#62;Změny:&#60;/h3&#62;
+    &#60;ul class="verze"&#62;
+        &#60;li&#62;<b>[Změny]</b>&#60;/li&#62;
+    &#60;/ul&#62;
+        </code></pre>
+
+        <!--PS-->
+        <h2>PS</h2>
+        <h4>Pokud chcete vypsat znaky &#60; &#62; bez toho, aby se to bralo jako část kódu, tak znaky "&#60;" napište jako "&#38;#60;" a znaky "&#62;" napiště jako "&#38;#62;" </h4>
+        <h4>Také jsem zjistil, že HTML umí vypisovat i emotikony 😀</h4>
+    </body>
+</html>

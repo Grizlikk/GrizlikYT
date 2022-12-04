@@ -1,0 +1,96 @@
+/* Obecné nastavení stránky */
+body {
+    background-image: url(obrazky/Batch.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: silver;
+    padding: 0 80px 40px 80px;
+
+}
+h1 {
+    text-align: center;
+    font-size: 5cm;
+    font-family: 'Courier New', Courier, monospace;
+    padding-right: 40px;
+    text-shadow: 10px 15px 15px rgba(0,0,0,0.3)
+}
+h2 {
+    font-size: 69px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+h3 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: 500;
+    margin: 12px 20px 12px 20px;
+}
+ol, ul {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 52px;
+}
+ul ul, ol ul {
+    list-style-type: square;
+    line-height: 35px;
+}
+pre {
+    background-color: rgba(185, 185, 185, 0.6);
+    font-size: 18px;
+    transition: width 2s, height 4s;
+}
+div {
+    text-align: center;
+}
+
+
+/* Nastevení pro zobrazení horního panelu tlačítek */
+.horni-panel {
+    padding: 10px 10px;
+    margin: 0px -80px 0 -80px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+button {
+    background-color: rgb(90, 20, 240);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 3px 3px 3px 3px;
+    border-radius: 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+button:hover {
+    background-color: rgb(120, 80, 255);
+    box-shadow: 3px 8px 16px 0 rgba(0,0,0,0.3), 5px 10px 20px 0 rgba(0,0,0,0.3);
+}
+.aktualni {
+    background-color: rgb(120, 80, 255);
+    cursor: not-allowed;
+}
+.aktualni:hover {
+    box-shadow: none;
+    background-color: rgb(120, 80, 255);
+}
+
+/* Ostatní */
+.bila {
+    background-color: rgba(185, 185, 185, 0.6);
+}
+.mensi-pismo {
+    font-size: 20px;
+}
+.verze {
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
