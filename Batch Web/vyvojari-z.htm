@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <title>BATCH - PRO ZAČÁTEČNÍKY</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        <!--Navigační panel-->
+        <div class="horni-panel">
+            <a href="index.htm"><button>Hlavní stránka</button></a>
+            <a href="videa.htm"><button>Videa</button></a>
+            <a href="prikazy.htm"><button>Příkazy</button></a>
+            <a href="programy.htm"><button>Programy</button></a>
+            <a href="informace.htm"><button>Informace</button></a>
+            <a href="faq.htm"><button>FAQ</button></a>
+            <a href="vyvojari.htm"><button>Pro vývojáře</button></a>
+        </div>
+
+        <!--Úvod-->
+        <h1>PRO ZAČÁTEČNÍKY</h1>
+        <h3>Pokud neumíš dělat webové stránky, zde najdeš vše, co je potřeba vědět, k udělání základní rozšiřující webové stránky, například s vysvětlením nějakého Batch programu</h3>
+        <br />
+
+        <!--Začátek-->
+        <h3>Jak funguje psaní webových stránek:</h3>
+        <p>K psaní webových stránek nepotřebujete žádné speciální programy, stačí vám pouze poznámkový blok, ale v profesionálních editorech se vám bude pracovat mnohem lépe. K otevření webové stránky stačí daný soubor otevřít v libovolném webovém prohlížeči.</p>
+        <p>Všechny soubory webových stránek mají příponu .htm nebo .html (obvykle se používá .htm, protože je to prostě kratší).</p>
+        <br />
+
+        <!--Úvod do psaní programů-->
+        <h3>Úvod do HTML:</h3>
+        <p>Všechny stránky, které zde budete psát, budou v jazyce HTML. HTML není programovací jazyk, ale tzv. značkovací jazyk. To znamená, že každý "příkaz" je jakási značka, uzavřená do &#60;&#62;.</p>
+        <p>Každá značka má vždy nějaký začátek a nějaký konec. Ukončovací značka vždy obsahuje navíc znak "/", např: otevírací znakča: <b><code>&#60;p&#62;</code></b> a uzavírací značka: <b><code>&#60;/p&#62;</code></b></p>
+        <br />
+
+        <!--Vysvětlení základních značek-->
+        <h3>Základní značky:</h3>
+        <p>Každý kód webové stránky vždy začíná s <b><code>&#60;!DOCTYPE html&#62;</code></b>. Jedná se o definici verze HTML, zde se však tímto nebudeme vůbec zabývat, ale každá stránka musí začínat právě takto.</p>
+        <p>Jako další musí být úplně celý kód stránky uzavřen do značek <b><code>&#60;html&#62;</code></b><b><code>&#60;/html&#62;</code></b>, aby prohlížeč věděl, že celý obsah souboru je HTML kód</p>
+        <p>Poté se vždy na stránce vyskytuje značka <b><code>&#60;head&#62;</code></b>, která obsahuje informace o stránce, které slouží pro prohlížeč, dále značka <b><code>&#60;body&#62;</code></b>, obsahující data, které se zobrazí uživateli.</p>
+        <p>O značce <b><code>&#60;head&#62;</code></b> se nebudeme bavit, tuto část prostě zkopírujete podle šablony v sekci <a href="vyvojari.htm">Pro vývojáře</a>. Jediná pro vás zajímavá značka uvnitř značky <b><code>&#60;head&#62;</code></b> bude značka <b><code>&#60;title&#62;</code></b>, obsahující text, který se zobrazí nahoře, na kartě stránky v prohlížeči. Pro tuto stránku je to: <b><code>&#60;title&#62;</code></b>BATCH - PRO ZAČÁTEČNÍKY<b><code>&#60;/title&#62;</code></b>. Nyní se však budeme bavit pouze o značce <b><code>&#60;body&#62;</code></b></p>
+        <p>Horní navigační panel také pouze zkopírujete ze šablony, budete upravovat pouze tu část, která říká "Sem napište kód stránky".</p>
+        <p>Nejdůležitější značkou, kterou budete používat, je již dříve zmíněná značka <b><code>&#60;p&#62;</code></b>, neboli odstavec (paragraph). Cokoliv bude uvnitř této značky se zobrazí stejně jako text, který čtete právě teď.</p>
+        <p>Pokud budete chtít text upravovat (do značky lze vložit i další značky), tak když text bude ve značce <b><code>&#60;b&#62;</code></b>, tak se zobrazí <b>tučně</b> (bold) a když bude ve značce <b><code>&#60;i&#62;</code></b>, tak se zobrazí <i>kurzívou</i> (italic)</p>
+        <p>Když budete chtít odřádkovat (enter), tak napíšete značku <b><code>&#60;br&#62;</code></b>, která <b>neobsahuje ukončovací značku!</b> (žádné <b><code>&#60;/br&#62;</code></b> neexistuje)</p>
+        <p>Například, když do souboru napíšete:</p>
+
+        <!--Příklad na základní značky-->
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html&#62;
+    &#60;head&#62;&#60;/head&#62;
+    &#60;body&#62;
+        &#60;p&#62;Tohle je text&#60;/p&#62;
+        &#60;p&#62;&#60;b&#62;Tohle je tučný text&#60;/b&#62;,
+        &#60;i&#62;tento text je kurzívou&#60;/i&#62; a
+        &#60;b&#62;&#60;i&#62;tento text je tučnou kurzívou&#60;/i&#62;&#60;/b&#62;&#60;/p&#62;
+    &#60;/body&#62;
+    &#60;/html&#62;
+        </code></pre>
+
+        <p>tak se to zobrazí takovýmto způsobem:</p>
+        <br />
+
+        <!--Zobrazení příkladu-->
+        <p>Tohle je text</p>
+        <p><b>Tohle je tučný text</b>, <i>tento text je kurzívou</i> a <b><i>tento text je tučnou kurzívou</i></b></p>
+
+
+        <br />
+
+        <!--Psaní zdrojových kódů-->
+        <h3>Psaní zdrojového kódu:</h3>
+        <p>Veškeré nastavení zobrazování je už hotové, část v <b><code>&#60;head&#62;</code></b>, kde je napsané: <b><code>&#60;link rel="stylesheet" type="text/css" href="styles.css"&#62;</code></b> nastaví veškeré úpravy textu, pozadí, barev, atd. Pokud tedy napíšete pouze text ve značce <b><code>&#60;p&#62;</code></b>, nemusíte se už nijak starat o jeho zobrazení (Můžete si vyzkoušet, že když tento řádek z části <b><code>&#60;head&#62;</code></b> vymažete, tak veškeré grafické úpravy zmizí).</p>
+        <p>Kdybyste chtěli napsat nadpis, tak ten se píše pomocí značky <b><code>&#60;h[číslo]&#62;</code></b>, kde můžete dosadit čísla od 1 do 6, podle velikosti nadpisu (h1 je největší a h6 nejmenší). Zde mám zatím nastavené akorát nadpisy do h4.</p>
+        <p>Pokud chcete napsat zdrojový kód nějakého souboru, tak daný kód uzavřete do značek <b><code>&#60;pre&#62;</code></b> a <b><code>&#60;code&#62;</code></b>. Nemusíme si dopodrobna vysvětlovat, co tyto značky znamenají, ale prostě jsem to tak nastavil. Značka <b><code>&#60;pre&#62;</code></b> znamená, že se text zobrazí tak, jak je napsaný (např. značka <b><code>&#60;p&#62;</code></b> bude ignorovat mezery na začátku řádku a odřádkování) a značka <b><code>&#60;code&#62;</code></b> vypíše text tzv. <code>strojovým písmem</code>, tedy písmem, kde je každé písmeno stejně široké. Tohle se pro psaní zdrojových kódů často používá.</p>
+        <p>Pokud text uzavřete do <b><code>&#60;pre&#62;</code></b>, tak vám to i automaticky vyplní <span class="bila">světlé pozadí za text</span>, takže každý bude vědět, že se jedná o kód programu.</p>
+        <p>Když tedy napíšete kód, který vypadá takto:</p>
+
+        <!--Příklad na kód-->
+
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html&#62;
+    &#60;head&#62;&#60;/head&#62;
+    &#60;body&#62;
+        &#60;h4&#62;Příkaz IF&#60;/h4&#62;
+        &#60;p&#62;Kód za příkazem &#60;b&#62;if&#60;/b&#62; se spustí jen tehdy, kdy platí podmínka&#60;/p&#62;
+        &#60;p&#62;Obecný zápis je: if &#60;b&#62;[Podmínka]&#60;/b&#62; &#60;i&#62;[Příkaz]&#60;/i&#62;&#60;br&#62;např.:&#60;/p&#62;
+        &#60;pre&#62;&#60;code&#62;
+            @echo off
+            set /a a = 5
+            if &#60;b&#62;%a% == 5&#60;/b&#62; &#60;i&#62;echo Text&#60;/i&#62;
+    
+            set /a a = 10
+            if &#60;b&#62;%a% == 5&#60;/b&#62; &#60;i&#62;echo Text2&#60;/i&#62;
+            pause
+        &#60;/code&#62;&#60;/pre&#62;
+        &#60;p&#62;Vypíše se pouze "Text", protože u "Text2" podmínka neplatí&#60;/p&#62;
+    
+    &#60;/body&#62;
+    &#60;/html&#62;
+        </code></pre>
+
+        <p>Tak se to zobrazí takto:</p>
+        <br />
+
+        <!--Zobrazení příkladu na kód-->
+        <h4>Příkaz IF</h4>
+        <p>Kód za příkazem <b>if</b> se spustí jen tehdy, kdy platí podmínka</p>
+        <p>Obecný zápis je: if <b>[Podmínka]</b> <i>[Příkaz]</i><br>např.:</p>
+        <pre><code>
+        @echo off
+        set /a a = 5
+        if <b>%a% == 5</b> <i>echo Text</i>
+        
+        set /a a = 10
+        if <b>%a% == 5</b> <i>echo Text2</i>
+        pause
+        </code></pre>
+        <p>Vypíše se pouze "Text", protože u "Text2" podmínka neplatí</p>
+        <br />
+
+        <!--Seznamy-->
+        <h3>Vytváření seznamů</h3>
+        <p>Pokud chcete vypsat seznam položek, tak existují dva různé seznamy, číslovaný a nečíslovaný. Jejich značky jsou <b><code>&#60;ul&#62;</code></b> pro nečíslovaný (odrážkový) seznam (<b>u</b>nordered <b>l</b>ist) a <b><code>&#60;ol&#62;</code></b> pro číslovaný seznam (<b>o</b>rdered <b>l</b>ist). Číslovaný seznam se používá v případě, že záleží na pořadí položek, pokud na pořadí nezáleží, používá se nečíslovaný seznam.</p>
+        <p>Každá položka jakéhokoliv seznamu se uzavírá do značek <b><code>&#60;li&#62;</code></b></p>
+        <p>Takže např.:</p>
+
+        <!--Příklad na seznamy-->
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html&#62;
+    &#60;head&#62;&#60;/head&#62;
+    &#60;body&#62;
+        &#60;p&#62;Verze Windows:&#60;/p&#62;
+        &#60;ul&#62;
+            &#60;li&#62;Windows XP&#60;/li&#62;
+            &#60;li&#62;Windows 95&#60;/li&#62;
+            &#60;li&#62;Windows 11&#60;/li&#62;
+            &#60;li&#62;Windows 7&#60;/li&#62;
+        &#60;/ul&#62;
+
+        &#60;p&#62;Verze Windows chronologicky:&#60;/p&#62;
+        &#60;ol&#62;
+            &#60;li&#62;Windows 95&#60;/li&#62;
+            &#60;li&#62;Windows XP&#60;/li&#62;
+            &#60;li&#62;Windows 7&#60;/li&#62;
+            &#60;li&#62;Windows 11&#60;/li&#62;
+        &#60;/ol&#62;
+        
+    &#60;/body&#62;
+    &#60;/html&#62;
+        </code></pre>
+
+        <p>Tento kód se zobrazí takto:</p>
+        <br />
+
+        <!--Zobrazení příkladu na seznamy-->
+        <p>Verze Windows:</p>
+        <ul>
+            <li>Windows XP</li>
+            <li>Windows 95</li>
+            <li>Windows 11</li>
+            <li>Windows 7</li>
+        </ul>
+
+        <p>Verze Windows chronologicky:</p>
+        <ol>
+            <li>Windows 95</li>
+            <li>Windows XP</li>
+            <li>Windows 7</li>
+            <li>Windows 11</li>
+        </ol>
+        <br />
+
+        <p>Jak vidím, tak jsem nastavil obří velikost písma u seznamů, když jsem vymýšlel nadpisy. Kdybyste to chtěli změnit, dovnitř značky &#60;ol&#62; nebo &#60;ul&#62; připište text <b><span class="bila"><code>class="mensi-pismo"</code></span></b>, takže to bude vypadat takto: <b>&#60;ul class="mensi-pismo"&#62;</b>. Tohle zmenší velikost písma v seznamu na polovinu, teď se však nebudeme zabývat tím, co ten zápis znamená, je to tak prostě nastavené.</p>
+        <p>Kdybych nyní napsal tento kód znovu, ale s menším písmem, tak to bude vypadat takto:</p>
+
+        <!--Příklad na seznamy 2-->
+        <pre><code>
+    &#60;!DOCTYPE html&#62;
+    &#60;html&#62;
+    &#60;head&#62;&#60;/head&#62;
+    &#60;body&#62;
+        &#60;p&#62;Verze Windows:&#60;/p&#62;
+        &#60;ul class="mensi-pismo"&#62;
+            &#60;li&#62;Windows XP&#60;/li&#62;
+            &#60;li&#62;Windows 95&#60;/li&#62;
+            &#60;li&#62;Windows 11&#60;/li&#62;
+            &#60;li&#62;Windows 7&#60;/li&#62;
+        &#60;/ul&#62;
+    
+        &#60;p&#62;Verze Windows chronologicky:&#60;/p&#62;
+        &#60;ol class="mensi-pismo"&#62;
+            &#60;li&#62;Windows 95&#60;/li&#62;
+            &#60;li&#62;Windows XP&#60;/li&#62;
+            &#60;li&#62;Windows 7&#60;/li&#62;
+            &#60;li&#62;Windows 11&#60;/li&#62;
+        &#60;/ol&#62;
+    
+    &#60;/body&#62;
+    &#60;/html&#62;
+        </code></pre>
+
+        <p>Tak se tento kód zobrazí takto:</p>
+        <br />
+
+        <!--Zobrazení příkladu 2 na seznamy-->
+        <p>Verze Windows:</p>
+        <ul class="mensi-pismo">
+            <li>Windows XP</li>
+            <li>Windows 95</li>
+            <li>Windows 11</li>
+            <li>Windows 7</li>
+        </ul>
+
+        <p>Verze Windows chronologicky:</p>
+        <ol class="mensi-pismo">
+            <li>Windows 95</li>
+            <li>Windows XP</li>
+            <li>Windows 7</li>
+            <li>Windows 11</li>
+        </ol>
+        <br />
+
+        <h2>Závěr:</h2>
+        <p>Doufám, že vám tento text alespoň trochu pomohl, i kdybyste se neodvážili psát vlastní stránku, tak stačí, když budete např. vylepšovat stávající text. Kdyby vám cokoliv nefungovalo, klidně se zeptejte (nemusíte se nutně ptát mě) a kdybyste třeba chtěli přidat nějakou funkci, kterou jsem v tomto opravdu stručném tutoriálu nezmínil, můžu ji do tohoto návodu klidně přidat (teda pokud budu vědět jak xDDD, takže radši to nechám na někom, jako je <i>@Numax</i>, <i>@Zubik1000CZ</i>, nebo <i>@řůt</i> :D)</p>
+
+    </body>
+</html>
