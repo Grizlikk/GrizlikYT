@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Příkazy - Pause</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+    <!--Navigační panel-->
+    <div class="panel">
+        <a href="../index.htm"><button>Hlavní stránka</button></a>
+        <a href="../videa.htm"><button>Videa</button></a>
+        <a href="../prikazy.htm"><button>Příkazy</button></a>
+        <a href="../programy.htm"><button>Programy</button></a>
+        <a href="../informace.htm"><button>Informace</button></a>
+        <a href="../faq.htm"><button>FAQ</button></a>
+        <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
+        <a href="../o-kanale.htm"><button>O kanále</button></a>
+    </div>
+
+    <!--Obsah-->
+        <h1>PAUSE</h1>
+        <p>Pozastaví zpracování dávkového programu se zobrazením výzvy: <i>Pokračujte stisknutím libovolné klávesy. . .</i></p>
+        <h4>Syntaxe</h4>
+        <p>pause</p>
+        <table>
+            <tr>
+                <td><p><strong>Parametr</strong></p></td>
+                <td><p><strong>Popis</strong></p></td>
+            </tr>
+            <tr>
+                <td><p>/?</p></td>
+                <td><p>Zobrazuje nápovědu k tomuto příkazu.</p></td>
+            </tr>
+        </table>
+
+        <!--Další poznámky k příkazu-->
+        <h4>Poznámky</h4>
+        <ul>
+            <li><p>Pokud dávkový program zastavíte stisknutím kláves CTRL+C, zobrazí se následující zpráva: <em>Terminate batch job (Y/N)?</em>. Pokud v reakci na tuto zprávu stisknete Y (pro ano), dávkový program se ukončí a řízení se vrátí do operačního systému.</p></li>
+            <li><p>Příkaz pause můžete vložit před část dávkového souboru, kterou možná nebudete chtít zpracovat. Když program narazí na <em>pause</em>, pozastaví zpracování dávkového programu, takže můžete dávkový program zastavit stisknutím kláves CTRL+C a poté stisknutím klávesy Y.</p></li>
+        </ul>
+
+        <!--Příklady použití příkazu-->
+        <h4>Příklady</h4>
+        <p>Chcete-li pozastavit zpracování dávkového programu, zadejte:</p>
+        <pre><code>
+    pause
+        </code></pre>
+
+
+        <!--Paticka-->
+        <br />
+        <footer class="panel">
+            <div>
+                <p>&copy; 2022 <a href="https://www.youtube.com/@GrizlikD">Grizlik :D</a> Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

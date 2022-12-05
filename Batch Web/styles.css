@@ -47,9 +47,13 @@ pre {
     background-color: rgba(185, 185, 185, 0.6);
     font-size: 18px;
     transition: width 2s, height 4s;
+    border: 1px solid rgb(143, 143, 143);
 }
 div {
     text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
 }
 
 

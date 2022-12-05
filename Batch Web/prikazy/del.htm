@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Příkazy - Del</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+    <!--Navigační panel-->
+    <div class="panel">
+        <a href="../index.htm"><button>Hlavní stránka</button></a>
+        <a href="../videa.htm"><button>Videa</button></a>
+        <a href="../prikazy.htm"><button>Příkazy</button></a>
+        <a href="../programy.htm"><button>Programy</button></a>
+        <a href="../informace.htm"><button>Informace</button></a>
+        <a href="../faq.htm"><button>FAQ</button></a>
+        <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
+        <a href="../o-kanale.htm"><button>O kanále</button></a>
+    </div>
+    <!--Obsah-->
+        <h1>DEL</h1>
+        <p>Smaže jeden nebo více souborů </p>
+        <h4>Syntaxe</h4>
+        <p>del [/p] [/f] [/s] [/q] [/a:[atributy]] [Jména souborů]</p>
+        <table>
+            <tr>
+                <td><p><strong>Parametr</strong></p></td>
+                <td><p><strong>Popis</strong></p></td>
+            </tr>
+            <tr>
+                <td><p>[Jména souborů]</p></td>
+                <td><p>Určuje seznam jednoho nebo více souborů. K odstranění více souborů lze použít zástupné zaky <b>*</b> nebo <b>?</b>. Pokud je zadán adresář (složka), všechny soubory v adresáři budou odstraněny.</p></td>
+            </tr>
+            <tr>
+                <td><p>/p</p></td>
+                <td><p>Vyzve k potvrzení před odstraněním zadaného souboru.</p></td>
+            </tr>
+            <tr>
+                <td><p>/f</p></td>
+                <td><p>Vynutí smazání souborů pouze pro čtení.</p></td>
+            </tr>
+            <tr>
+                <td><p>/s</p></td>
+                <td><p>Odstraní zadané soubory z aktuálního adresáře a všech podadresářů. Zobrazuje názvy souborů při jejich odstraňování.</p></td>
+            </tr>
+            <tr>
+                <td><p>/q</p></td>
+                <td><p>Nebudete vyzváni k potvrzení odstranění.</p></td>
+            </tr>
+            <tr>
+                <td><p>/a:[atributy]</p></td>
+                <td>
+                    <p>Odstraní soubory na základě následujících atributů souborů:</p>
+                    <ul>
+                        <li><p><em>r</em> Soubory pouze pro čtení</p></li>
+                        <li><p><em>h</em> Skryté soubory</p></li>
+                        <li><p><em>i</em> Neobsahují indexované soubory</p></li>
+                        <li><p><em>s</em> Systémové soubory</p></li>
+                        <li><p><em>a</em> Soubory připravené k archivaci</p></li>
+                        <li><p><em>l</em> Body změny zpracování</p></li>
+                        <li><p><em>-</em> Používá se jako předpona s významem „ne“</p></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><p>/?</p></td>
+                <td><p>Zobrazuje nápovědu k tomuto příkazu.</p></td>
+            </tr>
+        </table>
+
+        <!--Další poznámky k příkazu-->
+        <h4>Poznámky</h4>
+        <ul>
+            <li><p>Pokud použijete příkaz <em>del /p</em>, zobrazí se následující zpráva: <em>[Název souboru], Delete (Y/N)?</em></p></li>
+            <li><p>Pokud v parametru <em>[Jména souborů]</em> zadáte konkrétní složky, budou odstraněny všechny zahrnuté soubory v zadané složce. Pokud například chcete odstranit všechny soubory ve složce <em>\práce</em>, zadejte: <em>del \práce</em></p></li>
+            <li><p>Příkazem <em>del *.*</em> smažete soubory s jakýmkoliv jménem a jakoukoliv příponou.</p></li>
+            <li><p>Pokud je v adresáři mezera, musí být obalen v dvojitých uvozovkách: <em>del "\slozka s mezerou"</em>.</p></li>
+        </ul>
+
+        <!--Příklady použití příkazu-->
+        <h4>Příklady</h4>
+        <p>Chcete-li smazat soubor <em>soubor.txt</em> v aktuálním adresáři , zadejte:</p>
+        <pre><code>
+    del soubor.txt
+        </code></pre>
+
+        <p>Chcete-li smazat všechny soubory s příponou <em>.bat</em> v aktuálním adresáři</address>, zadejte:</p>
+        <pre><code>
+    del *.bat
+        </code></pre>
+
+        <p>Chcete-li odstranit všechny <em>read-only</em> soubory v aktuálním adresáři, zadejte:</p>
+        <pre><code>
+    del /a:r *.*
+        </code></pre>
+
+        <!--Paticka-->
+        <br />
+        <footer class="panel">
+            <div>
+                <p>&copy; 2022 <a href="https://www.youtube.com/@GrizlikD">Grizlik :D</a> Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
