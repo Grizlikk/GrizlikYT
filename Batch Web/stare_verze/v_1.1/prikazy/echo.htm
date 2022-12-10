@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Příkazy - Echo</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+
+<body>
+    <!--Navigační panel-->
+    <div class="panel">
+        <a href="../index.htm"><button>Hlavní stránka</button></a>
+        <a href="../videa.htm"><button>Videa</button></a>
+        <a href="../prikazy.htm"><button>Příkazy</button></a>
+        <a href="../programy.htm"><button>Programy</button></a>
+        <a href="../informace.htm"><button>Informace</button></a>
+        <a href="../faq.htm"><button>FAQ</button></a>
+        <a href="../vyvojari.htm"><button>Pro vývojáře</button></a>
+        <a href="../o-kanale.htm"><button>O kanále</button></a>
+    </div>
+    <!--Obsah-->
+        <h1>ECHO</h1>
+        <p>Zobrazuje zprávy nebo vypíná a zapíná funkci vypisování příkazů.</p>
+        <h4>Syntaxe</h4>
+        <p>echo [Zpráva]</p>
+        <p>echo [on / off]</p>
+        <table>
+            <tr>
+                <td><p><strong>Parametr</strong></p></td>
+                <td><p><strong>Popis</strong></p></td>
+            </tr>
+            <tr>
+                <td><p>[Zpráva]</p></td>
+                <td><p>Určuje text, který se má zobrazit na obrazovce.</p></td>
+            </tr>
+            <tr>
+                <td><p>[on / off]</p></td>
+                <td><p>Zapíná nebo vypíná funkci vypisování příkazů. Ve výchozím nastavení je tato funkce zapnutá.</p></td>
+            </tr>
+            <tr>
+                <td><p>/?</p></td>
+                <td><p>Zobrazuje nápovědu k tomuto příkazu.</p></td>
+            </tr>
+        </table>
+
+        <!--Další poznámky k příkazu-->
+        <h4>Poznámky</h4>
+        <ul>
+            <li><p>Příkaz <em>echo [Zpráva]</em> je zvláště užitečný, když je vypisování příkazů vypnuté. Chcete-li zobrazit zprávu dlouhou několik řádků bez zobrazení jakýchkoli příkazů, můžete do dávkového programu zahrnout několik příkazů <em>echo [Zpráva]</em> za příkaz <em>echo off</em>.</p></li>
+            <li><p>Chcete-li zabránit vypsání určitého příkazu v dávkovém souboru, vložte před příkaz znak &#64;. Chcete-li zabránit vypisování všech příkazů v dávkovém souboru, vložte na začátek souboru příkaz <em>@echo off</em>.</p></li>
+            <li><p>Chcete-li zobrazit svislou čáru (&#124;) nebo znak přesměrování (&#60; nebo &#62;), když používáte echo, použijte stříšku (&#94;) bezprostředně před svislou čarou nebo znak přesměrování. Například &#94;&#124;, &#94;&#62; nebo &#94;&#60;. Chcete-li zobrazit stříšku, zadejte dvě stříšky za sebou (&#94;&#94;).</p></li>
+        </ul>
+
+        <!--Příklady použití příkazu-->
+        <h4>Příklady</h4>
+        <p>Chcete-li zobrazit nějakou zprávu, zadejte:</p>
+        <pre><code>
+    echo Hello world!
+        </code></pre>
+
+        <p>Chcete-li zobrazit aktuální nastavení vypisování spouštěných příkazů, zadejte:</p>
+        <pre><code>
+    echo
+        </code></pre>
+
+        <p>Chcete-li zobrazit prázdný řádek, zadejte:</p>
+        <pre><code>
+    echo.
+        </code></pre>
+        
+        <p>Chcete-li zabránit zobrazení všech spouštěných příkazů v dávkovém souboru (včetně příkazu echo off) na obrazovce, na prvním řádku typu dávkového souboru:</p>
+        <pre><code>
+    @echo off
+        </code></pre>
+
+        <!--Paticka-->
+        <br />
+        <footer class="panel">
+            <div>
+                <p>&copy; 2022 <a href="https://www.youtube.com/@GrizlikD">Grizlik :D</a> Všechna práva vyhrazena.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
