@@ -17,7 +17,7 @@ Přímo v této hlavní složce se nachází soubor *Discord.bat*. Tento soubor 
 Ve složce **Batch tutoriály** naleznete soubory z mých tutoriálů na programování v jazyce batch. Kdybych vše dal do složky *Videa*, tak by to bylo dost nepřehledné, a proto jsem na batch tutoriály vytvořil vlastní složku.
 
 ### Batch Web:
-Ve složce **Batch Web** se nachází soubory webové stránky https://www.grizlik-batch.great-site.net/. Na této stránce naleznete seznam dílů do série na Batch a také seznam příkazů nebo ukázky Batch programů. Zde se můžete zapojit do vývoje této webové stránky
+Dříve zde byla složka **Batch Web**, ve které byly soubory k webové stránce https://www.grizlik-batch.great-site.net/. Všechny tyto soubory však byly přesunuty do samostatného repozitáře **[Batch-web](https://github.com/Grizlikk/Batch-web)**
 
 ### Informace:
 **Tento GitHub je zatím poměrně nedodělaný**. Stále zde budu přidávat nové složky i soubory a také budu upravovat tento úvodní text. Kdyby zde cokoliv nefungovalo nebo jste měli nějaký problém, můžete mi napsat do komentářů na YouTube nebo na e-mail: *grizlik.smajlik@gmail.com*
