@@ -248,13 +248,13 @@ bool PlatnySoubor(std::string soubor, std::string error = "") {
 	// Kontrola pro posledni hodnotu v radku
 	int soucetradku = 0, soucetsouboru = 0;
 	std::string radek;
-	// Procházení souboru po řádcích
+	// Prochazeni souboru po radcich
 	for (int i = 2; i < 102; i++) {
 		radek = PrectiRadek(soubor, i);
 		for (int j = 0; j < 11; j++) {
 			soucetradku += radek[j] - 48;
 		}
-		// Pokud poslední hodnota v řádku není rovna souctu radku % [hodnota], radek je neplatny
+		// Pokud posledni hodnota v radku neni rovna souctu radku % [hodnota], radek je neplatny
 		if (radek[10] - 48 != (soucetradku - radek[10] + 48) % (PrectiRadek(soubor, 102)[17] - 48)) {
 			std::cout << error;
 			return false;
@@ -292,7 +292,7 @@ void NactiSoubor(std::string soubor, int PoleOdpovedi[][10]) {
 	for (int i = 2; i < 102; i++) {
 		for (int j = 0; j < 10; j++) {
 			// Pokud je dana hodnota na danem radku 1, odpovidajici pozice je rovna sve hodnote, pokud je tam 0, pozice je 0
-			// Napriklad: Na 5. radku je 7. hodnota 1, takze odpovedi[2][7] = 8
+			// Napriklad: Na 5. radku je 7. hodnota 1, takze odpovedi[3][7] = 8
 			PoleOdpovedi[i - 2][j] = (PrectiRadek(soubor, i)[j] == '1') ? j + 1 : 0;
 		}
 	}
