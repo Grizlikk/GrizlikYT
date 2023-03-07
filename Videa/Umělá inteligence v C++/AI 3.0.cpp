@@ -292,7 +292,7 @@ void NactiSoubor(std::string soubor, int PoleOdpovedi[][10]) {
 	for (int i = 2; i < 102; i++) {
 		for (int j = 0; j < 10; j++) {
 			// Pokud je dana hodnota na danem radku 1, odpovidajici pozice je rovna sve hodnote, pokud je tam 0, pozice je 0
-			// Napriklad: Na 5. radku je 7. hodnota 1, takze odpovedi[3][7] = 8
+			// Napriklad: Na 5. radku je 7. hodnota 1, takze odpovedi[3][6] = 7
 			PoleOdpovedi[i - 2][j] = (PrectiRadek(soubor, i)[j] == '1') ? j + 1 : 0;
 		}
 	}
