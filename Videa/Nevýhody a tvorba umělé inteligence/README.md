@@ -3,3 +3,5 @@ Tato hra však není spravedlivá a ten, kdo začíná, vždy vyhraje, musí vš
 Tento program se trénuje proti generátoru náhodných čísel a eliminuje špatné možnosti, takže ve výsledku se v hraní hry postupně zlepšuje.
 
 Tento program je však neskutečně pomalý a neefektivní, také neumí ukládat naučené hodnoty, takže při ukončení programu je veškerý postup ztracen. Proto slouží spíše jako ukázka, jak může trénování umělé inteligence fungovat, než jako nějaký reálný příklad použitelné umělé inteligence :D
+
+***Tento program obsahuje chybu, která zbůsobuje, že se učení nemůže dostat dále, než na poslední hodnotu před koncem. Chybu jsem vysvětlil a opravil v [tomto videu](https://youtu.be/l83Vg8A8Tkc). Pokud si tedy chcete stáhnout opravenou verzi programu, naleznete ji [ZDE](https://github.com/Grizlikk/GrizlikYT/tree/noice/Videa/Oprava%20um%C4%9Bl%C3%A9%20inteligence%20v%20batchi) a nebo můžte vyzkoušet [verzi v jazyce C++](https://github.com/Grizlikk/GrizlikYT/tree/noice/Videa/Um%C4%9Bl%C3%A1%20inteligence%20v%20C%2B%2B)***

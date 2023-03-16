@@ -1,0 +1,2 @@
+Opravená verze [této umělé inteligence](https://github.com/Grizlikk/GrizlikYT/tree/noice/Videa/Nev%C3%BDhody%20a%20tvorba%20um%C4%9Bl%C3%A9%20inteligence) v jazyce Batch.<br>
+Chyba se vyskytovala na řádku **66**, kde bylo špatně implementované mazání neplatných hodnot z pole možných odpovědí. Celý zbytek programu je stejný, jako v předchozí verzi
