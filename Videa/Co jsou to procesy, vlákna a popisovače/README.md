@@ -1,0 +1,2 @@
+Program **"Soubory.bat"** vytvoří 1000 prázdných souborů a také uloží jejich názvy do souboru ***Seznam.txt***<br>
+Soubor **"Popisovače.cpp"** je program, který otevře všechny tyto soubory podle seznamu ***Seznam.txt***, čímž vytvoří výraznou změnu v počtu popisovačů ve správci úloh a také když budou soubory otevřené, nebude k nim možné nijak jinak přistupovat
