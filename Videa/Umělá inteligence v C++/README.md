@@ -1,2 +1,2 @@
 Soubory **AI 1.0.cpp**, **AI 2.0.cpp**, **AI 2.1.cpp** a **AI 3.0.cpp** jsou 4 různé verze stejného programu, tedy umělé inteligence, která se sama učí hrát hru o přičítání čísel od 1 do 10 do součtu 100.<br>
-Uvnitř archivu **AI.zip** se nachází zkompilovaná verze programu **AI 3.0.cpp** pro platformu x86-64 (prostě Windows, neřešte to, pokud nevíte, co to znamená), abyste ho dokázali spustit i bez předchozí kompilace.
+Uvnitř archivu **AI.zip** se nachází zkompilovaná verze programu **AI 3.0.cpp**.
