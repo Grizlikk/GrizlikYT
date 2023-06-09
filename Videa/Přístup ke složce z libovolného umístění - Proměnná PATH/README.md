@@ -1,0 +1,1 @@
+**"Error.bat"** ihned po spuštění vejde do složky ***Public***, vytvoří tam soubor erroru a po zavření dané hlášky soubor zpět vymaže
