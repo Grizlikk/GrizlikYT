@@ -1,0 +1,5 @@
+1.) a" == "a" echo 
+2.) a" (echo ahoj) else echo 
+    a" (echo ahoj) else start tajny_soubor.txt rem
+3.) a" (echo ahoj) else set /a login=1&rem 
+    a" (echo ahoj) else if "a"=="a

@@ -1,0 +1,3 @@
+Soubory **"Login 1.bat"**, **"Login 2.bat"** a **"Login 3.bat"** požadují po uživateli zadání hesla a pak otevřou **"tajny_soubor.txt"**, heslo je však možné obejít zadáním vstupů ze souboru **"Prolomeni.txt"**<br>
+Soubory **"web.php"** obsahuje formulář, od kterého když uživatel něco napíše a odešle, tak se mu daný text zobrazí díky souboru **"zpracovano.php"**. Tento soubor je záměrně upravený tak, aby když uživatel odešle platný PHP příkaz, tak ho server spustil<br>
+Soubory **"hesla.txt"** a **"PHP Injection.txt"** jsou pouze doplňující soubory k ukázce injekce kódu na PHP stránce. Zadáním vstupu z **"PHP Injection.txt"** se uživateli vypíše obsah souboru **"hesla.txt"**

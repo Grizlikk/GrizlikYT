@@ -1,0 +1,8 @@
+Tento obsah souboru je velice tajný
+Proto je tento soubor přístupný pouze se znalostí hesla
+
+Batch je však náchylný k injekci kódu, proto je možné obejít zadání hesla a získat přístup k tomuto souboru
+
+
+
+PS: Dejte like a odběr :)
