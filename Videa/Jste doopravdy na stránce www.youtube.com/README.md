@@ -1,0 +1,1 @@
+**"Blokování.bat"** provede změny v souboru *C:\Windows\System32\drivers\etc\hosts* a přesměruje domény známých antivirů na IP adresu ***127.0.0.1***, tedy na váš vlastní počítač, čímž vám kompletně zablokuje přístup na tyto domény. Pro opravu musíte záznamy ze souboru *C:\Windows\System32\drivers\etc\hosts* ručně vymazat
