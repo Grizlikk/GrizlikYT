@@ -1,0 +1,1 @@
+**"Bubble sort.cpp"** vygeneruje pole 10 čísel a poté je seřadí od nejmenšího po největší metodou bubble sort
