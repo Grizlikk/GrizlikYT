@@ -1,0 +1,8 @@
+**"Dědičnost.cpp"** vytvoří obecnou třídu ***Vozidlo*** a podle ní vytváří další podtřídy s konkrétními vozidly<br>
+**"Konstruktor třídy.cpp"** ukazuje použití konstruktoru třídy pro automatické vyplnění atributů hned při vytváření objektu<br>
+**"Metody a třídy.cpp"** vytvoří třídu ***Automobil***, podle které následně vytvoří dva objekty, vyplní jejich atributy a otestuje spouštění metod<br>
+**"Objekty a atributy.cpp"** vytvoří třídy ***Automobil*** obsahující tři atributy a poté vytvoří dva objekty podle této třídy a vyplňuje obsah jejich atributů<br>
+**"Polymorfismus.cpp"** vytvoří obecnou třídu ***Zvire***, která obsahuje metodu ***ZvukZvirete***. Podle této třídy následně vytvoří čtyři další podtřídy a v každé podtřídě přepíše fungování této metody<br>
+**"Specifikátory přístupu.cpp"** ukazuje rozdíl mezi atributy označenými jako ***public***, ***private*** a ***protected***<br>
+**"Zapouzdření dat praktický příklad".cpp** ukazuje příklad, kde se v praxi používají veřejné a privátní atributy a metody. Třída ***Obdelnik*** vytváří obdélník, jehož parametry se zadávají i vypisují ve stopách (například pro použití programu v Americe). Samotné výpočty uvnitř třídy však pobíhají v metrech (například protože programátor není z Ameriky). Třída tedy obsahuje veřejné metody pracující ve stopách, ale také skryté a metody pracující v metrech<br>
+**"Zapouzdření dat.cpp"** vytvoří třídu ***BankovniUcet***, kde jsou citlivé údaje, jako zůstatek nebo číslo účtu, skryté před zbytkem programu. K přístupu k těmto údajům musíte použít metody, které jsou nastavené jako veřejné
