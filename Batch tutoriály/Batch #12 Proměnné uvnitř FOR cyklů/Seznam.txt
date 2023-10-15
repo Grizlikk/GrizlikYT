@@ -1,0 +1,5 @@
+IP.txt
+Číslo záznamu.bat
+Subskrájb.dat
+For F.bat
+Web.htm

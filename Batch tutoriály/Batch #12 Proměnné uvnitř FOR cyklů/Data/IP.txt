@@ -1,0 +1,5 @@
+google.com;142.251.36.14;Internetovy vyhledavac
+seznam.cz;77.75.77.222;Cesky internetovy vyhledavac
+youtube.com;142.250.179.174;Nevim co to je za stranku, ale pry je to dobre
+w3schools.com;13.248.240.135;Nejlepsi stranka na uceni programovacich jazyku
+tiktok.com;13.227.219.121;FUJ! Socialni site! :D
