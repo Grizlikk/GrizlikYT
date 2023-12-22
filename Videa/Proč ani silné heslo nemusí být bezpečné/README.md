@@ -1,0 +1,2 @@
+**"HashZTextu.cs"** vygeneruje hash ze zadaného textu, pomocí zadaného algoritmu. ***Aplikaci musíte ovládat z příkazového řádku***, jinak se jen otevře a zavře<br>
+**"Random email generator.cpp"** jsem vytvořil jenom pro ulehčení editování videa :D. Jak tam ukazuji tu "databázi" e-mailů a hesel, tak tento program mi usnadnil generovat tyto kombinace. Stačí zadat počet a program vygeneruje zadané množství falešných e-mailových adres (jedná se pouze o náhodný text ve tvaru emailové adresy) a poté zadané množství náhodných hesel
