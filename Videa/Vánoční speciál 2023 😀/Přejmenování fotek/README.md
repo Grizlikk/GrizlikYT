@@ -1,0 +1,2 @@
+Program, který naleznete v souboru **"Přejmenování fotek.zip"** pod hlesem ***grizlik*** přejmenuje vybrané fotky na formát ***\[ROK\]\[MĚSÍC\]\[DEN\]_\[HODINA\]\[MINUTA\]\[SEKUNDA\]***. Program je zkompilovaný pro Windows a pro spuštění potřebujete *.NET*!<br>
+Ve složce **zdroj** dále naznete zdrojový kód tohoto programu jako projekt ve *Visual Studiu*

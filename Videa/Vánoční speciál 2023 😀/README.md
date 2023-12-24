@@ -1,0 +1,3 @@
+Ve složce **Kalendáře** naleznete soubory s kalendářemi pro všechny roky. Pokud nemáte Excel, můžete si kalendáře stáhnout jako .pdf<br>
+Ve složce **Program na výuku** se nachází program pro výuku slovíček: Slovíčka načtete ze souboru a program vám je bude vypisovat. Program také dovede soubory slovíček upravovat nebo vytvářet<br>
+Ve složce **Přejmenování fotek** naleznete program pro sjednocení názvů fotek na formát: ***\[ROK\]\[MĚSÍC\]\[DEN\]_\[HODINA\]\[MINUTA\]\[SEKUNDA\]***
