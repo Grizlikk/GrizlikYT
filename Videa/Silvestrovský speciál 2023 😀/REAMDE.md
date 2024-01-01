@@ -1,0 +1,1 @@
+Soubor **"Statistiky 2023.pdf"** obsahuje statistiky mého kanálu za rok ***2023*** a také za minulý rok ***2022***. Od vydání silvestrovského speciálu jsem ještě upravil údaje za prosinec, protože v tu dobu prosinec ještě probíhal, a tak se hodnoty trochu změnily.
