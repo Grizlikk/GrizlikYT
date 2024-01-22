@@ -1,0 +1,2 @@
+**"Aplikace.cs"** po spuštění vyhodí hlášku s textem, že právě byla spuštěna aplikace<br>
+**"YouTube kanál.cpp"** otevře YouTube kanál toho člověka, čí identifikátor je napsaný v souboru, který aplikaci předáte jako první parametr. Pro otevření YouTube kanálu tedy stačí přetáhnout soubor na aplikaci
