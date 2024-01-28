@@ -1,0 +1,1 @@
+@start www.youtube.com
