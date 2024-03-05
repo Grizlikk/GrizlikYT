@@ -1,0 +1,2 @@
+**"Obsah složky.cpp"** vypíše všechny soubory a složky v aktuální složce *(nikoliv v podsložkách)*<br>
+**"Písmena.cpp"** vygeneruje 500 souborů s názvy ***"1 Soubor.txt"*** až ***"500 Soubor.txt"***, ale číslice od ***0*** po ***9*** nahradí písmeny od ***A*** po ***J***
