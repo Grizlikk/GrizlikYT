@@ -1,0 +1,1 @@
+**"Troll.ps1"** je PowerShell skript, který jsem použil v ukázce toho, proč nespouštět náhodné skripty, které najdete někde na internetu. Tento skript ukončí explorer, vyhodí vám upozornění a po 5 sekundách vypne počítač :D
