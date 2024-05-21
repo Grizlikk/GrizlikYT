@@ -1,0 +1,2 @@
+**"Proces k pozastavení MT.cpp"** běží na dvou vláknech procesoru. Jedno každých půl sekundy vypisuje do konzole *"Ahoj"* a druhé *"Čau"*. Jeho pozastavení pozastaví obě tyto vlákna současně<br>
+**"Proces k pozastavení.cpp"** každých půl sekundy vypisuje do konzole text *"Ahoj"*. Slouží jako ukázka pozastavení běžícího procesu
