@@ -1,0 +1,2 @@
+**"Double na bajty.c"** načte od uživatele desetinné číslo s 64 bitovou přesností, uloží ho do paměti a následně vypíše, jak program dané číslo přečte a převede do desítkové soustavy na 25 desetinných míst a jakým způsobem se číslo bit po bitu uložilo do paměti počítače<br>
+**Float na bajty.c"** funguje úplně stejně, ale pracuje s 32 bitovými desetinnými čísly, takže dokáže čísla ukládat s menší přesností
