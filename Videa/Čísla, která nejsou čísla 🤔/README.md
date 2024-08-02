@@ -1,0 +1,2 @@
+**"Kalkulačka.c"** je jednoduchý program kalkulačky se dvěma 32 bitovými čísly. Napřed zadáte operaci (+ - * / odmocnina mocning), následně zadáte čísla pro výpočet a program provede výpočet a zobrazí jak výsledné 32 bitové desetinné číslo, tak i způsob, jak se číslo bit po bitu uložilo do paměti<br>
+**"Porovnání nečíselných hodnot.c"** ukazuje, jaké výsledky vrátí vzájemné porování hodnot: -Nekonečno, -0, 0, 1, NaN, +Nekonečno
