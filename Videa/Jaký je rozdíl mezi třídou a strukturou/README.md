@@ -1,0 +1,12 @@
+## Jaký je rozdíl mezi třídou a strukturou?
+
+**"Referenční datový typ.cs"** popisuje rozdíl mezi ***hodnotovým*** *(třída)* a ***referenčním*** *(struktura)* datovým typem. Obsah dat v objektu třídy je možné upravit z funkce, protože třída se předává jako odkaz, ale v případě struktury se data kopírují, takže je upravit nelze<br>
+**"Struktura v C#.cs"** ukazuje definici a použití struktury v jazyce C#<br>
+**"Struktura vs třída v Listu.cs"** obsahuje praktický příklad rozdílu mezi strukturou a třídou v C# Listu. List vrací položky jako kopie, takže v případě třídy vrátí kopii odkazu na data, přes který je možné původní data upravovat, ale v případě struktury vrátí kopii dat, kterou přímo upravit nelze<br>
+**"Struktura vs třída v poli.cs"** je velice podobný programu **"Struktura vs třída v Listu.cs"**, akorát pro ukládání dat používá pole, které při indexování vždy vrací odkaz na danou položku. Data je tedy možné přímo přepisovat jak v případě, že jsou v poli uložené třídy, tak i v případě, že jsou tam uložené struktury<br>
+**"Struktury v C.c"** ukazuje základní použití struktur v jazyce C. Definuje strukturu *Souradnice*, která v sobě obsahuje 3 proměnné, vyplí jejich hodnoty a následně celou strukturu předá jako parametr do funkce<br>
+**"Třídy a struktury v C++.cpp"** ukazuje definici tříd/struktur v jazyce C++. Oproti jazyku C mohou struktury v C++ *(stejně jako třídy)* obsahovat kromě proměnných i celé funkce, které s proměnnými dovedou pracovat<br>
+**"Uložení proměnné do jiné proměnné v C++.cpp"** přímo přiřadí hodnotu jedné proměnné do druhé proměnné *(promenna1 = promenna2)*. V C++ nezáleží na tom, jestli jsou dané proměnné struktury nebo třídy, program se v obou případech zachová stejně, a tedy že data z jedné proměnné nakopíruje do druhé proměnné<br>
+**"Uložení proměnné do jiné proměnné.cs"** také přímo přiřadí hodnotu jedné proměnné do druhé proměnné *(promenna1 = promenna2)*. V C# se však program bude chovat odlišně podle toho, jestli jsou dané proměnné třídy nebo struktury. V případě struktur se jejich obsah zkopíruje a od přiřazení budou na sobě nezávislé. V případě tříd se však zkopíruje jen odkaz, který ale pořád povede na stejné data, takže úpravou dat skrz kteroukoliv z těchto proměnných se vždy upraví data i v té druhé proměnné
+
+**PS: C# \*třída = &struktura** 😁
