@@ -1,0 +1,1 @@
+@if a%2==a @(ffprobe %1) else @ffmpeg -i %1 -map 0:%2 -filter:a volumedetect -f null null
