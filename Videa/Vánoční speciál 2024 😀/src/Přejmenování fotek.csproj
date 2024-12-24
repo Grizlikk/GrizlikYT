@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows7.0</TargetFramework>
+		<RootNamespace>Prejmenovani_fotek</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ApplicationIcon>Photo icon.ico</ApplicationIcon>
+		<Description>Program pro přejmenování fotek podle data</Description>
+		<Version>4.2.0</Version>
+		<AssemblyVersion>4.2.0</AssemblyVersion>
+		<FileVersion>4.2.0</FileVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <Optimize>False</Optimize>
+	  <FileAlignment>8192</FileAlignment>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <FileAlignment>8192</FileAlignment>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="Photo icon.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MetadataExtractor" Version="2.8.1" />
+	</ItemGroup>
+
+</Project>
