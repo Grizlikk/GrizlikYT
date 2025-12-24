@@ -1,0 +1,2 @@
+Soubor **"RandomCopy.zip"** pod heslem ***grizlik*** obsahuje zkompilovanou verzi programu pro kopírování souborů v náhodném pořadí. Pro spuštění programu musíte mít v počítači nainstalovaný *[.NET](https://dotnet.microsoft.com/download "https://dotnet.microsoft.com/download")*<br>
+Ve složce **"zdroj"** se nachází zdrojový kód tohoto programu jako projekt ve *Visual Studiu*

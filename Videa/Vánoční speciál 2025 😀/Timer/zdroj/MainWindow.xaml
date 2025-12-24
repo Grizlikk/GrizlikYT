@@ -1,0 +1,52 @@
+﻿<Window x:Class="Timer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Timer"
+        mc:Ignorable="d"
+        Title="Timer" Height="450" Width="810">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="CountdownTextBlock" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="80" FontWeight="Bold" Text="{Binding CountdownText, UpdateSourceTrigger=PropertyChanged}" />
+
+        <GroupBox Header="Nastavení cíle časovače" Grid.Column="1" BorderThickness="3" BorderBrush="#FFC3C3C3">
+            <StackPanel Margin="15,0,0,0" VerticalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Margin" Value="0,10,0,5"/>
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Width" Value="150"/>
+                    </Style>
+                </StackPanel.Resources>
+
+                <TextBlock Text="Rok:"/>
+                <TextBox x:Name="YearTextBox" Text="{Binding YearText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Měsíc:"/>
+                <TextBox x:Name="MonthTextBox" Text="{Binding MonthText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Den:"/>
+                <TextBox x:Name="DayTextBox" Text="{Binding DayText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Hodina:"/>
+                <TextBox x:Name="HourTextBox" Text="{Binding HourText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Minuta:"/>
+                <TextBox x:Name="MinuteTextBox" Text="{Binding MinuteText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Sekunda:"/>
+                <TextBox x:Name="SecondTextBox" Text="{Binding SecondText, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <TextBlock Text="Milisekunda:"/>
+                <TextBox x:Name="MillisecondTextBox" Text="{Binding MillisecondText, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

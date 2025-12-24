@@ -1,0 +1,94 @@
+﻿<Window x:Class="RandomCopy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomCopy"
+        mc:Ignorable="d"
+        Title="Náhodné kopírování souborů" Height="450" Width="800" Background="Silver">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="#FFE0E0E0"/>
+                <Setter Property="Margin" Value="5,0,5,0"/>
+                <Setter Property="Padding" Value="0,2,0,2"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Margin" Value="5,1,0,0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Margin" Value="0,0,5,0"/>
+                <Setter Property="Padding" Value="3,1,3,1"/>
+            </Style>
+            <Style TargetType="ItemsControl">
+                <Setter Property="Margin" Value="5"/>
+            </Style>
+        </Grid.Resources>
+
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Cesta pro zdrojové soubory:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="OriginalPathTextBox" Text="{Binding OriginalPath, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button x:Name="SelectOriginalPathButton" Grid.Column="1" Click="SelectOriginalPathButton_Click">Vybrat cestu</Button>
+            </Grid>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1">
+            <Label Content="Cesta, do které se mají soubory zkopírovat:"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="DestinationPathTextBox" Text="{Binding DestinationPath, UpdateSourceTrigger=PropertyChanged}"/>
+                <Button x:Name="SelectDestinationPathButton" Grid.Column="1" Click="SelectDestinationPathButton_Click">Vybrat cestu</Button>
+            </Grid>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Filtr pro výběr souborů, které se mají překopírovat (výraz *.* označí všechny soubory ve složce):"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="CopyFilesFilterTextBox" FontWeight="Bold" FontFamily="Courier New" Text="{Binding FilesFilter, UpdateSourceTrigger=PropertyChanged}" TextChanged="CopyFilesFilterTextBox_TextChanged"/>
+                <Button x:Name="CopyFilesButton" Grid.Column="1" FontWeight="Bold" Foreground="#FFC00000" Click="CopyFilesButton_Click">Překopírovat soubory</Button>
+            </Grid>
+        </StackPanel>
+
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Náhled souborů, které budou překopírovány v náhodném pořadí:"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <ItemsControl x:Name="FilesToCopyItemsControl" Foreground="DarkGreen"/>
+            </ScrollViewer>
+        </Grid>
+
+
+        <ProgressBar Grid.Row="4" x:Name="CopyingFilesProgressBar" Visibility="{Binding CopyingProgressBarVisibility, UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="5" Value="{Binding CopyingProgressBarValue, UpdateSourceTrigger=PropertyChanged}"/>
+    </Grid>
+</Window>

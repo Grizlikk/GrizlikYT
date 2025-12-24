@@ -1,0 +1,2 @@
+Soubor **"Timer.zip"** pod heslem ***grizlik*** obsahuje zkompilovanou verzi programu časovače, který odpočítává od aktuálního času do zvoleného času. Pro spuštění programu musíte mít v počítači nainstalovaný *[.NET](https://dotnet.microsoft.com/download "https://dotnet.microsoft.com/download")*<br>
+Ve složce **"zdroj"** se nachází zdrojový kód tohoto programu jako projekt ve *Visual Studiu*
