@@ -1,0 +1,913 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Generated code for controls styles to look like they are from Minecraft-->
+
+    <!-- Minecraft Colors -->
+    <Color x:Key="MinecraftDarkGray">#FF3C3C3C</Color>
+    <Color x:Key="MinecraftGray">#FF5B5B5B</Color>
+    <Color x:Key="MinecraftLightGray">#FF8B8B8B</Color>
+    <Color x:Key="MinecraftBlue">#FF4D7AFF</Color>
+    <Color x:Key="MinecraftGreen">#FF5A814B</Color>
+    <Color x:Key="MinecraftDarkGreen">#FF3D5A2D</Color>
+    <Color x:Key="MinecraftBrown">#FF8B4513</Color>
+    <Color x:Key="MinecraftDarkBrown">#FF5C300C</Color>
+    <Color x:Key="MinecraftDirt">#FF8B7355</Color>
+    <Color x:Key="MinecraftText">#FFFFFEFE</Color>
+    <Color x:Key="MinecraftTextDark">#FF404040</Color>
+
+    <!-- Brushes -->
+    <SolidColorBrush x:Key="MinecraftDarkGrayBrush" Color="{StaticResource MinecraftDarkGray}"/>
+    <SolidColorBrush x:Key="MinecraftGrayBrush" Color="{StaticResource MinecraftGray}"/>
+    <SolidColorBrush x:Key="MinecraftLightGrayBrush" Color="{StaticResource MinecraftLightGray}"/>
+    <SolidColorBrush x:Key="MinecraftBlueBrush" Color="{StaticResource MinecraftBlue}"/>
+    <SolidColorBrush x:Key="MinecraftGreenBrush" Color="{StaticResource MinecraftGreen}"/>
+    <SolidColorBrush x:Key="MinecraftDarkGreenBrush" Color="{StaticResource MinecraftDarkGreen}"/>
+    <SolidColorBrush x:Key="MinecraftBrownBrush" Color="{StaticResource MinecraftBrown}"/>
+    <SolidColorBrush x:Key="MinecraftDarkBrownBrush" Color="{StaticResource MinecraftDarkBrown}"/>
+    <SolidColorBrush x:Key="MinecraftDirtBrush" Color="{StaticResource MinecraftDirt}"/>
+    <SolidColorBrush x:Key="MinecraftTextBrush" Color="{StaticResource MinecraftText}"/>
+    <SolidColorBrush x:Key="MinecraftTextDarkBrush" Color="{StaticResource MinecraftTextDark}"/>
+    <SolidColorBrush x:Key="CheckBoxCheckedGreenBrush" Color="#30A030"/>
+
+    <!-- Button Style - Minecraft-style 3D button -->
+    <Style x:Key="MinecraftButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="3,3,3,3"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="Padding" Value="12,6"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Outer border that creates the 3D effect -->
+                        <Border x:Name="OuterBorder" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="3"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="0">
+                            <!-- Inner border for the pressed effect -->
+                            <Border x:Name="InnerBorder" 
+                                BorderBrush="#80000000" 
+                                BorderThickness="1"
+                                CornerRadius="0">
+                                <ContentPresenter x:Name="contentPresenter"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
+                            </Border>
+                        </Border>
+
+                        <!-- Top highlight for 3D effect -->
+                        <Border x:Name="TopHighlight" 
+                            BorderBrush="#40FFFFFF" 
+                            BorderThickness="2,2,0,0"
+                            CornerRadius="0"
+                            IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow for 3D effect -->
+                        <Border x:Name="BottomShadow" 
+                            BorderBrush="#80000000" 
+                            BorderThickness="0,0,2,2"
+                            CornerRadius="0"
+                            IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Mouse Over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="OuterBorder" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+
+                        <!-- Pressed -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="OuterBorder" Property="BorderThickness" Value="3,3,1,1"/>
+                            <Setter TargetName="TopHighlight" Property="BorderThickness" Value="0,0,0,0"/>
+                            <Setter TargetName="BottomShadow" Property="BorderThickness" Value="0,0,0,0"/>
+                            <Setter TargetName="InnerBorder" Property="Margin" Value="1,2,1,0"/>
+                            <Setter Property="Foreground" Value="#FFD0D0D0"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="OuterBorder" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Green Minecraft Button (for primary actions) -->
+    <Style x:Key="MinecraftGreenButtonStyle" BasedOn="{StaticResource MinecraftButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource MinecraftGreenBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftDarkGreenBrush}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+
+    <!-- Blue Minecraft Button (for secondary actions) -->
+    <Style x:Key="MinecraftBlueButtonStyle" BasedOn="{StaticResource MinecraftButtonStyle}" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource MinecraftBlueBrush}"/>
+        <Setter Property="BorderBrush" Value="#FF3959CC"/>
+    </Style>
+
+    <!-- TextBlock Style - Minecraft font with shadow -->
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="2" 
+                              Direction="315" 
+                              BlurRadius="0" 
+                              Opacity="0.7"
+                              Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Header Text Style -->
+    <Style x:Key="MinecraftHeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Margin" Value="0,0,0,10"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="3" 
+                              Direction="315" 
+                              BlurRadius="0" 
+                              Opacity="0.8"
+                              Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Section Title Style -->
+    <Style x:Key="MinecraftSectionTitleStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="1.5" 
+                              Direction="315" 
+                              BlurRadius="0" 
+                              Opacity="0.6"
+                              Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- CheckBox Style - Minecraft-style -->
+    <Style x:Key="MinecraftCheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="8,4"/>
+        <Setter Property="Padding" Value="28,4,8,4"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid>
+                        <!-- Checkbox border -->
+                        <Border x:Name="CheckBoxBorder"
+                            Width="22"
+                            Height="22"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="4,0,8,0"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0">
+                            <!-- Check mark -->
+                            <Path x:Name="CheckMark"
+                              Width="14"
+                              Height="14"
+                              Stretch="Fill"
+                              Data="M0,5 L5,10 L12,0"
+                              Stroke="{StaticResource CheckBoxCheckedGreenBrush}"
+                              StrokeThickness="3"
+                              StrokeEndLineCap="Square"
+                              StrokeStartLineCap="Square"
+                              Opacity="0"/>
+                        </Border>
+
+                        <!-- Content -->
+                        <ContentPresenter x:Name="contentPresenter"
+                                      HorizontalAlignment="Left"
+                                      VerticalAlignment="Center"
+                                      Margin="36,0,0,0"
+                                      RecognizesAccessKey="True"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Checked state -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="CheckMark" Property="Opacity" Value="1"/>
+                            <Setter TargetName="CheckBoxBorder" Property="Background" Value="{StaticResource MinecraftGrayBrush}"/>
+                        </Trigger>
+
+                        <!-- Mouse over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="CheckBoxBorder" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+
+                        <!-- Pressed -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="CheckBoxBorder" Property="Margin" Value="5,1,7,-1"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="CheckBoxBorder" Property="Opacity" Value="0.5"/>
+                            <Setter Property="Foreground" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- RadioButton Style - Minecraft-style -->
+    <Style x:Key="MinecraftRadioButtonStyle" TargetType="RadioButton">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="28,4,8,4"/>
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid>
+                        <!-- Radio button circle -->
+                        <Border x:Name="RadioButtonBorder"
+                            Width="20"
+                            Height="20"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="4,0,8,0"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="10">
+                            <!-- Inner dot -->
+                            <Ellipse x:Name="RadioButtonDot"
+                                 Width="10"
+                                 Height="10"
+                                 Fill="{StaticResource CheckBoxCheckedGreenBrush}"
+                                 Opacity="0"/>
+                        </Border>
+
+                        <!-- Content -->
+                        <ContentPresenter x:Name="contentPresenter"
+                                      HorizontalAlignment="Left"
+                                      VerticalAlignment="Center"
+                                      Margin="36,0,0,0"
+                                      RecognizesAccessKey="True"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Checked state -->
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="RadioButtonDot" Property="Opacity" Value="1"/>
+                            <Setter TargetName="RadioButtonBorder" Property="Background" Value="{StaticResource MinecraftGrayBrush}"/>
+                        </Trigger>
+
+                        <!-- Mouse over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="RadioButtonBorder" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+
+                        <!-- Pressed -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="RadioButtonBorder" Property="Margin" Value="5,1,7,-1"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="RadioButtonBorder" Property="Opacity" Value="0.5"/>
+                            <Setter Property="Foreground" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TextBox Style - Minecraft-style -->
+    <Style x:Key="MinecraftTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="Padding" Value="6"/>
+        <Setter Property="CaretBrush" Value="{StaticResource MinecraftGreenBrush}"/>
+        <Setter Property="SelectionBrush" Value="{StaticResource MinecraftBlueBrush}"/>
+        <Setter Property="SelectionTextBrush" Value="White"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Grid>
+                        <!-- Main border with 3D effect -->
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0">
+                            <!-- Inner border for depth -->
+                            <Border BorderBrush="#20000000" BorderThickness="1" CornerRadius="0">
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                          Margin="0"
+                                          Background="Transparent"/>
+                            </Border>
+                        </Border>
+
+                        <!-- Top highlight -->
+                        <Border x:Name="TopHighlight"
+                            BorderBrush="#40FFFFFF"
+                            BorderThickness="2,2,0,0"
+                            CornerRadius="0"
+                            IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow -->
+                        <Border x:Name="BottomShadow"
+                            BorderBrush="#80000000"
+                            BorderThickness="0,0,2,2"
+                            CornerRadius="0"
+                            IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Focused -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource MinecraftGreenBrush}"/>
+                        </Trigger>
+
+                        <!-- Mouse over -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ComboBox Style - Minecraft-style -->
+    <Style x:Key="MinecraftComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="{StaticResource Minecraft}"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftTextBrush}"/>
+        <Setter Property="Background" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+        <!-- These are CRITICAL to prevent default system styling -->
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ComboBox">
+                    <Grid>
+                        <!-- Main border and content -->
+                        <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="20"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Selected item display -->
+                                <ContentPresenter x:Name="contentPresenter"
+                                          Grid.Column="0"
+                                          Content="{TemplateBinding SelectionBoxItem}"
+                                          ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                                          Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Left"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+
+                                <!-- Arrow area -->
+                                <Path x:Name="arrow"
+                              Grid.Column="1"
+                              Width="10"
+                              Height="5"
+                              Data="M0,0 L5,5 L10,0"
+                              Fill="{TemplateBinding Foreground}"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Stretch="Uniform"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Toggle button - MUST be transparent and handle click -->
+                        <ToggleButton x:Name="toggleButton"
+                              Background="Transparent"
+                              BorderBrush="Transparent"
+                              BorderThickness="0"
+                              IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                              Focusable="False"
+                              ClickMode="Press"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Stretch">
+                            <!-- Completely disable any visual feedback on this button -->
+                            <ToggleButton.Template>
+                                <ControlTemplate TargetType="ToggleButton">
+                                    <Border Background="Transparent"
+                                    BorderBrush="Transparent"
+                                    BorderThickness="0">
+                                        <ContentPresenter/>
+                                    </Border>
+                                </ControlTemplate>
+                            </ToggleButton.Template>
+                        </ToggleButton>
+
+                        <!-- Dropdown Popup -->
+                        <Popup x:Name="PART_Popup"
+                       IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                       Placement="Bottom"
+                       VerticalOffset="3"
+                       PopupAnimation="Slide"
+                       AllowsTransparency="True">
+                            <Border x:Name="DropDownBorder"
+                            MinWidth="{Binding ActualWidth, ElementName=border}"
+                            MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                            Background="{StaticResource MinecraftDarkGrayBrush}"
+                            BorderBrush="{StaticResource MinecraftGrayBrush}"
+                            BorderThickness="3"
+                            SnapsToDevicePixels="True">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Dropdown open -->
+                        <Trigger Property="IsDropDownOpen" Value="True">
+                            <Setter TargetName="arrow" Property="Data" Value="M0,5 L5,0 L10,5"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource MinecraftGreenBrush}"/>
+                        </Trigger>
+
+                        <!-- Mouse over - ONLY change border color, not background -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                            <Setter TargetName="arrow" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Slider Style - Minecraft-style -->
+    <Style x:Key="MinecraftSliderStyle" TargetType="Slider">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource MinecraftGreenBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Slider">
+                    <Grid>
+                        <!-- Track -->
+                        <Border x:Name="TrackBorder"
+                            Height="8"
+                            VerticalAlignment="Center"
+                            Background="{StaticResource MinecraftDarkGrayBrush}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="2"/>
+
+                        <!-- Track highlight (filled portion) -->
+                        <Border x:Name="TrackHighlight"
+                            Height="8"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Background="{TemplateBinding Foreground}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="2,2,0,2"/>
+
+                        <!-- Thumb -->
+                        <Track x:Name="PART_Track">
+                            <Track.Thumb>
+                                <Thumb x:Name="Thumb"
+                                   Width="20"
+                                   Height="20"
+                                   Background="{StaticResource MinecraftGrayBrush}"
+                                   BorderBrush="{StaticResource MinecraftDarkGrayBrush}"
+                                   BorderThickness="3">
+                                    <Thumb.Template>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Grid>
+                                                <!-- Thumb base -->
+                                                <Border Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    CornerRadius="0">
+                                                    <!-- Inner highlight -->
+                                                    <Border BorderBrush="#40FFFFFF" BorderThickness="1,1,0,0"/>
+                                                </Border>
+
+                                                <!-- Top highlight -->
+                                                <Border BorderBrush="#40FFFFFF" BorderThickness="2,2,0,0" CornerRadius="0"/>
+
+                                                <!-- Bottom shadow -->
+                                                <Border BorderBrush="#80000000" BorderThickness="0,0,2,2" CornerRadius="0"/>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </Thumb.Template>
+                                </Thumb>
+                            </Track.Thumb>
+                        </Track>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Mouse over thumb -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Thumb" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+
+                        <!-- Thumb pressed -->
+                        <Trigger Property="IsMouseCaptureWithin" Value="True">
+                            <Setter TargetName="Thumb" Property="Background" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ScrollBar Button Style (for arrow buttons) -->
+    <Style x:Key="MinecraftScrollBarButtonStyle" TargetType="RepeatButton">
+        <Setter Property="Background" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Grid>
+                        <Border x:Name="Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <!-- Top highlight for 3D effect -->
+                        <Border BorderBrush="#40FFFFFF" BorderThickness="2,2,0,0" CornerRadius="0" IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow for 3D effect -->
+                        <Border BorderBrush="#80000000" BorderThickness="0,0,2,2" CornerRadius="0" IsHitTestVisible="False"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource MinecraftGreenBrush}"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource MinecraftGreenBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ScrollBar Page Button Style (for the track click areas) -->
+    <Style x:Key="MinecraftScrollBarPageButtonStyle" TargetType="RepeatButton">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RepeatButton">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ScrollBar Thumb Style -->
+    <Style x:Key="MinecraftScrollBarThumbStyle" TargetType="Thumb">
+        <Setter Property="Background" Value="{StaticResource MinecraftGrayBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Grid>
+                        <Border x:Name="ThumbBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="0">
+                            <!-- Inner highlight -->
+                            <Border BorderBrush="#40FFFFFF" BorderThickness="1,1,0,0"/>
+                        </Border>
+
+                        <!-- Top highlight for 3D effect -->
+                        <Border BorderBrush="#40FFFFFF" BorderThickness="2,2,0,0" CornerRadius="0" IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow for 3D effect -->
+                        <Border BorderBrush="#80000000" BorderThickness="0,0,2,2" CornerRadius="0" IsHitTestVisible="False"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ThumbBorder" Property="Background" Value="{StaticResource MinecraftLightGrayBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="ThumbBorder" Property="Background" Value="{StaticResource MinecraftGreenBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- VERTICAL ScrollBar Style -->
+    <Style x:Key="MinecraftVerticalScrollBarStyle" TargetType="ScrollBar">
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="MinWidth" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollBar">
+                    <Grid x:Name="Bg">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Background - Full height border -->
+                        <Border Grid.RowSpan="3"
+                            Background="{StaticResource MinecraftDarkGrayBrush}"
+                            BorderBrush="{StaticResource MinecraftGrayBrush}"
+                            BorderThickness="2"
+                            CornerRadius="0">
+
+                            <!-- Inner border for depth -->
+                            <Border BorderBrush="#20000000" BorderThickness="1" CornerRadius="0"/>
+                        </Border>
+
+                        <!-- Top highlight for entire scrollbar -->
+                        <Border Grid.RowSpan="3" 
+                            BorderBrush="#20FFFFFF" 
+                            BorderThickness="2,2,0,0" 
+                            CornerRadius="0" 
+                            IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow for entire scrollbar -->
+                        <Border Grid.RowSpan="3" 
+                            BorderBrush="#80000000" 
+                            BorderThickness="0,0,2,2" 
+                            CornerRadius="0" 
+                            IsHitTestVisible="False"/>
+
+                        <!-- Top Button -->
+                        <RepeatButton Grid.Row="0" 
+                                 Command="ScrollBar.LineUpCommand"
+                                 Style="{StaticResource MinecraftScrollBarButtonStyle}">
+                            <Path Data="M0,5 L5,0 L10,5" 
+                              Stroke="{StaticResource MinecraftTextBrush}"
+                              StrokeThickness="2"
+                              Stretch="Uniform"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                        </RepeatButton>
+
+                        <!-- Track -->
+                        <Track x:Name="PART_Track" 
+                           Grid.Row="1"
+                           IsDirectionReversed="true">
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton Command="ScrollBar.PageUpCommand"
+                                         Style="{StaticResource MinecraftScrollBarPageButtonStyle}"/>
+                            </Track.DecreaseRepeatButton>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton Command="ScrollBar.PageDownCommand"
+                                         Style="{StaticResource MinecraftScrollBarPageButtonStyle}"/>
+                            </Track.IncreaseRepeatButton>
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource MinecraftScrollBarThumbStyle}"/>
+                            </Track.Thumb>
+                        </Track>
+
+                        <!-- Bottom Button -->
+                        <RepeatButton Grid.Row="2" 
+                                 Command="ScrollBar.LineDownCommand"
+                                 Style="{StaticResource MinecraftScrollBarButtonStyle}">
+                            <Path Data="M0,0 L5,5 L10,0" 
+                              Stroke="{StaticResource MinecraftTextBrush}"
+                              StrokeThickness="2"
+                              Stretch="Uniform"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                        </RepeatButton>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- HORIZONTAL ScrollBar Style -->
+    <Style x:Key="MinecraftHorizontalScrollBarStyle" TargetType="ScrollBar">
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollBar">
+                    <Grid x:Name="Bg">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="20"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Background - Full width border -->
+                        <Border Grid.ColumnSpan="3"
+                            Background="{StaticResource MinecraftDarkGrayBrush}"
+                            BorderBrush="{StaticResource MinecraftGrayBrush}"
+                            BorderThickness="2"
+                            CornerRadius="0">
+
+                            <!-- Inner border for depth -->
+                            <Border BorderBrush="#20000000" BorderThickness="1" CornerRadius="0"/>
+                        </Border>
+
+                        <!-- Top highlight for entire scrollbar -->
+                        <Border Grid.ColumnSpan="3" 
+                            BorderBrush="#20FFFFFF" 
+                            BorderThickness="2,2,0,0" 
+                            CornerRadius="0" 
+                            IsHitTestVisible="False"/>
+
+                        <!-- Bottom shadow for entire scrollbar -->
+                        <Border Grid.ColumnSpan="3" 
+                            BorderBrush="#80000000" 
+                            BorderThickness="0,0,2,2" 
+                            CornerRadius="0" 
+                            IsHitTestVisible="False"/>
+
+                        <!-- Left Button -->
+                        <RepeatButton Grid.Column="0" 
+                                 Command="ScrollBar.LineLeftCommand"
+                                 Style="{StaticResource MinecraftScrollBarButtonStyle}">
+                            <Path Data="M5,0 L0,5 L5,10" 
+                              Stroke="{StaticResource MinecraftTextBrush}"
+                              StrokeThickness="2"
+                              Stretch="Uniform"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                        </RepeatButton>
+
+                        <!-- Track -->
+                        <Track x:Name="PART_Track" 
+                           Grid.Column="1"
+                           IsDirectionReversed="false">
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton Command="ScrollBar.PageLeftCommand"
+                                         Style="{StaticResource MinecraftScrollBarPageButtonStyle}"/>
+                            </Track.DecreaseRepeatButton>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton Command="ScrollBar.PageRightCommand"
+                                         Style="{StaticResource MinecraftScrollBarPageButtonStyle}"/>
+                            </Track.IncreaseRepeatButton>
+                            <Track.Thumb>
+                                <Thumb Style="{StaticResource MinecraftScrollBarThumbStyle}"/>
+                            </Track.Thumb>
+                        </Track>
+
+                        <!-- Right Button -->
+                        <RepeatButton Grid.Column="2" 
+                                 Command="ScrollBar.LineRightCommand"
+                                 Style="{StaticResource MinecraftScrollBarButtonStyle}">
+                            <Path Data="M0,0 L5,5 L0,10" 
+                              Stroke="{StaticResource MinecraftTextBrush}"
+                              StrokeThickness="2"
+                              Stretch="Uniform"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                        </RepeatButton>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- ScrollViewer Style with Minecraft scrollbars -->
+    <Style x:Key="MinecraftScrollViewerStyle" TargetType="ScrollViewer">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ScrollViewer">
+                    <Grid x:Name="Grid" Background="{TemplateBinding Background}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+                                            Grid.Column="0"
+                                            Grid.Row="0"
+                                            CanContentScroll="{TemplateBinding CanContentScroll}"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                                            Content="{TemplateBinding Content}"
+                                            Margin="{TemplateBinding Padding}"/>
+
+                        <!-- Vertical ScrollBar -->
+                        <ScrollBar x:Name="PART_VerticalScrollBar"
+                               Grid.Column="1"
+                               Grid.Row="0"
+                               Style="{StaticResource MinecraftVerticalScrollBarStyle}"
+                               Value="{TemplateBinding VerticalOffset}"
+                               Maximum="{TemplateBinding ScrollableHeight}"
+                               ViewportSize="{TemplateBinding ViewportHeight}"
+                               Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+
+                        <!-- Horizontal ScrollBar -->
+                        <ScrollBar x:Name="PART_HorizontalScrollBar"
+                               Orientation="Horizontal"
+                               Grid.Column="0"
+                               Grid.Row="1"
+                               Style="{StaticResource MinecraftHorizontalScrollBarStyle}"
+                               Value="{TemplateBinding HorizontalOffset}"
+                               Maximum="{TemplateBinding ScrollableWidth}"
+                               ViewportSize="{TemplateBinding ViewportWidth}"
+                               Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,65 @@
+﻿<Window x:Class="Minecraft_random_texturepacks.custom_windows.PackFormatInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_random_texturepacks.custom_windows"
+        mc:Ignorable="d"
+        Title="" WindowStyle="None" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" ResizeMode="NoResize" AllowsTransparency="True" KeyDown="Window_KeyDown">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/MinecraftStyles.xaml"/>
+    </Window.Resources>
+
+    <Window.Effect>
+        <DropShadowEffect ShadowDepth="0" BlurRadius="20" Opacity="0.5"/>
+    </Window.Effect>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="0:0:0.08" From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Border Background="{StaticResource MinecraftDarkGrayBrush}" BorderBrush="{StaticResource MinecraftGrayBrush}" BorderThickness="4" CornerRadius="0">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource MinecraftButtonStyle}">
+                    <Setter Property="Padding" Value="20,7"/>
+                    <Setter Property="FontSize" Value="22"/>
+                </Style>
+            </Grid.Resources>
+
+            <!-- Heading -->
+            <TextBlock Grid.Row="0" Style="{StaticResource MinecraftHeaderStyle}" FontSize="30" Text="Zadejte hodnotu pack_format:" Margin="10"/>
+
+            <!-- Additional info -->
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBlock Style="{StaticResource MinecraftSectionTitleStyle}" FontSize="18" Text="Seznam pack_format můžete nalézt na" Margin="5,5,0,5"/>
+                <TextBlock Style="{StaticResource MinecraftSectionTitleStyle}" FontSize="18" ToolTip="Otevře Minecraft Wiki: https://minecraft.wiki/Pack_format"><Hyperlink x:Name="OpenWikiLink" Click="OpenWikiLink_Click">Minecraft Wiki</Hyperlink></TextBlock>
+            </StackPanel>
+
+            <!-- Input text box -->
+            <TextBox Grid.Row="2" Style="{StaticResource MinecraftTextBoxStyle}" FontSize="32" MaxWidth="600" HorizontalContentAlignment="Center" Margin="7" Text="{Binding PackFormatInputValue, Mode=OneWayToSource}"/>
+
+            <!-- Control buttons -->
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="CancelButton" Content="Zrušit" Click="CancelButton_Click" ToolTip="Zavře dialogové okno a zruší generování texturepacku"/>
+                <Button x:Name="SkipButton" Content="Přeskočit" Click="SkipButton_Click" ToolTip="Zavře dialogovové okno a vygeneruje texturepack bez vyplněné hodnoty pack_format"/>
+                <Button x:Name="OkButton" Content="OK" Click="OkButton_Click" ToolTip="Potvrdí výše zadanou hodnotu a vyplní ji do pole pack_format výsledného texturepacku"/>
+            </StackPanel>
+            
+        </Grid>
+    </Border>
+</Window>

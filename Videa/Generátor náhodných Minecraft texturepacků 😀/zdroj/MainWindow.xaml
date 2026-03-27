@@ -1,0 +1,213 @@
+﻿<Window x:Class="Minecraft_random_texturepacks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_random_texturepacks"
+        mc:Ignorable="d"
+        Title="Generátor náhodných Minecraft texturepacků" MinHeight="650" MinWidth="940" Height="650" Width="940" RenderOptions.BitmapScalingMode="NearestNeighbor">
+
+    <Window.Background>
+        <ImageBrush ImageSource="pictures/dirt.png" Viewport="0,0,64,64" ViewportUnits="Absolute" TileMode="Tile"/>
+    </Window.Background>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/MinecraftStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <local:NumberWithSpacesConverter x:Key="NumberWithSpacesConverter"/>
+            <local:GenerateTexturepackButtonTextConverter x:Key="GenerateTexturepackButtonTextConverter"/>
+            <local:RandomizationPercentageSettingHeadingTextConverter x:Key="RandomizationPercentageSettingHeadingTextConverter"/>
+            <local:ReversedBooleanToVisibilityConverter x:Key="ReversedBooleanToVisibilityConverter"/>
+            <local:ReversedBooleanToCollabsedVisibilityConverter x:Key="ReversedBooleanToCollabsedVisibilityConverter"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style x:Key="MinecraftPanelStyle" TargetType="Border">
+                <Setter Property="Background" Value="{StaticResource MinecraftDarkGrayBrush}"/>
+                <Setter Property="BorderBrush" Value="{StaticResource MinecraftGrayBrush}"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="Margin" Value="10,5"/>
+                <Setter Property="Padding" Value="15"/>
+            </Style>
+        </Grid.Resources>
+
+        <!-- Mode Selection -->
+        <Border Grid.Row="0" Style="{StaticResource MinecraftPanelStyle}" DataContext="{Binding FilesSelectionSettings}">
+            <StackPanel>
+                <TextBlock Text="DETEKCE TEXTUR" Style="{StaticResource MinecraftHeaderStyle}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <RadioButton x:Name="AutoDetectJarRadio" Content="Automatická detekce .jar souboru" GroupName="Mode" Style="{StaticResource MinecraftRadioButtonStyle}" IsChecked="{Binding AutoDetectJarSelected}" Checked="AutoDetectJarRadio_Checked" d:IsChecked="True"/>
+                    <RadioButton x:Name="ManualJarSelectionRadio" Content="Manuální volba .jar souboru" GroupName="Mode" Style="{StaticResource MinecraftRadioButtonStyle}" IsChecked="{Binding ManualJarSelectionSelected}" Checked="ManualJarSelectionRadio_Checked"/>
+                    <RadioButton x:Name="CustomFolderSelectionRadio" Content="Rozházení složky" GroupName="Mode" Style="{StaticResource MinecraftRadioButtonStyle}" IsChecked="{Binding CustomFolderSelectionSelected}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Mode-Specific Settings -->
+        <Border Grid.Row="1" Style="{StaticResource MinecraftPanelStyle}" DataContext="{Binding FilesSelectionSettings}">
+            <Grid>
+                <!-- Auto detect JAR file -->
+                <StackPanel Orientation="Horizontal" Visibility="{Binding AutoDetectJarSelected, Converter={StaticResource BooleanToVisibilityConverter}}" d:Visibility="Hidden">
+                    <TextBlock Text="Vyberte verzi Minecraftu:" VerticalAlignment="Center" Style="{StaticResource MinecraftSectionTitleStyle}"/>
+                    <ComboBox x:Name="AutodetectedJarFilesComboBox" MinWidth="220" Style="{StaticResource MinecraftComboBoxStyle}" Margin="7,0" ItemsSource="{Binding AutodetectedJarFiles}" SelectionChanged="AutodetectedJarFilesComboBox_SelectionChanged" />
+                    <Button x:Name="RefreshMinecraftVersionsButton" Content="Znovu detekovat" Style="{StaticResource MinecraftButtonStyle}" Click="RefreshMinecraftVersionsButton_Click"/>
+                </StackPanel>
+
+                <!-- Manual JAR Settings -->
+                <Grid x:Name="ManualJarGrid" Visibility="{Binding ManualJarSelectionSelected, Converter={StaticResource BooleanToVisibilityConverter}}" d:Visibility="Hidden">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text=".jar soubor:" Style="{StaticResource MinecraftSectionTitleStyle}"/>
+                    <TextBox Grid.Column="1" x:Name="JarPathTextBox" Style="{StaticResource MinecraftTextBoxStyle}" Text="{Binding CustomPathToJarFile}" TextChanged="JarPathTextBox_TextChanged" d:Text="C:\Users\user\AppData\Roaming\.minecraft\versions\1.20.1\1.20.1.jar"/>
+                    <Button Grid.Column="2" x:Name="ChooseCustomJarFileButton" Content="Vybrat soubor" Style="{StaticResource MinecraftButtonStyle}" Click="ChooseCustomJarFileButton_Click"/>
+                </Grid>
+
+                <!-- Custom Folder Settings -->
+                <Grid x:Name="CustomFolderGrid" Visibility="{Binding CustomFolderSelectionSelected, Converter={StaticResource BooleanToVisibilityConverter}}" d:Visibility="Visible">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="Vlastní složka: " Style="{StaticResource MinecraftSectionTitleStyle}"/>
+                    <TextBox Grid.Column="1" x:Name="FolderPathTextBox" Style="{StaticResource MinecraftTextBoxStyle}" Text="{Binding CustomFolderPath}" TextChanged="FolderPathTextBox_TextChanged" d:Text="C:\Users\user\Documents\Textures"/>
+                    <Button Grid.Column="2" x:Name="ChooseCustomFolderButton" Content="Vybrat složku" Style="{StaticResource MinecraftButtonStyle}" Click="ChooseCustomFolderButton_Click"/>
+                </Grid>
+            </Grid>
+        </Border>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Column - Randomization Settings -->
+            <Border Grid.Column="0" Style="{StaticResource MinecraftPanelStyle}">
+                <StackPanel>
+                    <!-- Randomization Percentage -->
+                    <TextBlock  Style="{StaticResource MinecraftHeaderStyle}" d:Text="MÍRA ROZHÁZENÍ TEXTUR"
+                                Text="{Binding FilesSelectionSettings.CustomFolderSelectionSelected, Converter={StaticResource RandomizationPercentageSettingHeadingTextConverter}, Mode=OneWay}"/>
+
+                    <Grid VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" Text="1 %" Style="{StaticResource MinecraftSectionTitleStyle}"/>
+                        <Slider Grid.Column="1" x:Name="RandomizationSlider" Minimum="1" Maximum="100" Value="{Binding RandomizationSettings.RandomizationPercentage}" Style="{StaticResource MinecraftSliderStyle}" d:Value="100">
+                            <Slider.LayoutTransform>
+                                <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                            </Slider.LayoutTransform>
+                        </Slider>
+                        <TextBlock Grid.Column="2" Text="100 %" Style="{StaticResource MinecraftSectionTitleStyle}"/>
+                    </Grid>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,-15,0,5">
+                        <StackPanel.Resources>
+                            <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+                                <Setter Property="FontSize" Value="26"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <TextBlock x:Name="SliderValueText" Text="{Binding RandomizationSettings.RandomizationPercentage}" Foreground="{StaticResource CheckBoxCheckedGreenBrush}" d:Text="100"/>
+                        <TextBlock Text="%" Foreground="{StaticResource CheckBoxCheckedGreenBrush}"/>
+                    </StackPanel>
+
+                    <!-- Statistics -->
+                    <Border Background="{StaticResource MinecraftGrayBrush}" Padding="10" Margin="5" DataContext="{Binding RandomizationSettings}">
+                        <StackPanel>
+                            <TextBlock Text="STATISTIKY" Style="{StaticResource MinecraftHeaderStyle}"/>
+
+                            <Grid Margin="0,5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <DockPanel Grid.Row="0">
+                                    <TextBlock DockPanel.Dock="Left" FontSize="14" Text="Celkem souborů:"/>
+                                    <TextBlock DockPanel.Dock="Right" FontSize="16" HorizontalAlignment="Right" Text="{Binding TotalFiles, Converter={StaticResource NumberWithSpacesConverter}}" x:Name="TotalFilesText" Foreground="{StaticResource CheckBoxCheckedGreenBrush}" d:Text="12 345"/>
+                                </DockPanel>
+
+                                <DockPanel Grid.Row="1">
+                                    <TextBlock DockPanel.Dock="Left" FontSize="14" Text="Soubory k přeházení:"/>
+                                    <TextBlock DockPanel.Dock="Right" FontSize="16" HorizontalAlignment="Right" Text="{Binding FilesToRandomize, Mode=OneWay, Converter={StaticResource NumberWithSpacesConverter}}" x:Name="FilesToRandomizeText" Foreground="{StaticResource CheckBoxCheckedGreenBrush}" d:Text="12 345"/>
+                                </DockPanel>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+
+                    <!--Select output folder button-->
+                    <Button x:Name="SelectOutputFolderButton" FontSize="16" Style="{StaticResource MinecraftButtonStyle}" Click="SelectOutputFolderButton_Click" Content="VYBRAT CÍLOVOU SLOŽKU" Background="#FF676736"
+                            Visibility="{Binding FilesSelectionSettings.CustomFolderSelectionSelected, Converter={StaticResource ReversedBooleanToCollabsedVisibilityConverter}, Mode=OneWay}"/>
+
+                    <!-- Generate Button -->
+                    <Button 
+                        x:Name="GenerateTexturepackButton" FontSize="16" Style="{StaticResource MinecraftGreenButtonStyle}" Click="GenerateTexturepackButton_Click" d:Content="VYGENEROVAT TEXTUREPACK"
+                        Content="{Binding FilesSelectionSettings.CustomFolderSelectionSelected, Converter={StaticResource GenerateTexturepackButtonTextConverter}, Mode=OneWay}"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Right Column - Folder Selection -->
+            <Border Grid.Column="1" x:Name="FolderSelectionPanel" Style="{StaticResource MinecraftPanelStyle}" 
+                    Visibility="{Binding FilesSelectionSettings.CustomFolderSelectionSelected, Converter={StaticResource ReversedBooleanToVisibilityConverter}, Mode=OneWay}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Header -->
+                    <TextBlock Grid.Row="0" Text="SLOŽKY K ROZHÁZENÍ OBSAHU" Style="{StaticResource MinecraftHeaderStyle}"/>
+
+                    <!-- Quick Selection Buttons -->
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <Button x:Name="SelectAllButton" Content="Vybrat vše" Style="{StaticResource MinecraftButtonStyle}" Click="SelectAllButton_Click"/>
+                        <Button x:Name="UnselectAllButton" Content="Zrušit vše" Style="{StaticResource MinecraftButtonStyle}" Click="UnselectAllButton_Click"/>
+                        <Button x:Name="InvertSelectionButton" Content="Invertovat" Style="{StaticResource MinecraftButtonStyle}" Click="InvertSelectionButton_Click"/>
+                    </StackPanel>
+
+                    <!-- Folder Checkboxes -->
+                    <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto" Style="{StaticResource MinecraftScrollViewerStyle}">
+                        <ItemsControl x:Name="FolderSettingsItemsControl" DataContext="{Binding FolderSettings}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding Selected}" Style="{StaticResource MinecraftCheckBoxStyle}">
+                                        <CheckBox.LayoutTransform>
+                                            <ScaleTransform ScaleX="1.25" ScaleY="1.25"/>
+                                        </CheckBox.LayoutTransform>
+                                        <TextBlock Text="{Binding Name}"/>
+                                    </CheckBox>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

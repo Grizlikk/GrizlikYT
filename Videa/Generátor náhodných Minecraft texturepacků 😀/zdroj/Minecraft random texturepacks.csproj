@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>Minecraft_random_texturepacks</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ruby.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'" />
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'" />
+
+  <ItemGroup>
+    <None Remove="font\MinecraftFont.otf" />
+    <None Remove="pictures\dirt.png" />
+    <None Remove="pictures\error.png" />
+    <None Remove="pictures\grass.png" />
+    <None Remove="pictures\warning.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ruby.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="font\MinecraftFont.otf" />
+    <Resource Include="pictures\dirt.png" />
+    <Resource Include="pictures\error.png" />
+    <Resource Include="pictures\warning.png" />
+  </ItemGroup>
+
+</Project>

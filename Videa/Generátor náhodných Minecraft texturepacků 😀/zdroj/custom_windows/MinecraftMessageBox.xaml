@@ -1,0 +1,66 @@
+﻿<Window x:Class="Minecraft_random_texturepacks.custom_windows.MinecraftMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Minecraft_random_texturepacks.custom_windows"
+        mc:Ignorable="d"
+        Title="" WindowStyle="None" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" ResizeMode="NoResize" AllowsTransparency="True" KeyDown="Window_KeyDown">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/MinecraftStyles.xaml"/>
+    </Window.Resources>
+    
+    <Window.Effect>
+        <DropShadowEffect ShadowDepth="0" BlurRadius="20" Opacity="0.5"/>
+    </Window.Effect>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="Opacity" Duration="0:0:0.08" From="0" To="1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    
+    <Border Background="{StaticResource MinecraftDarkGrayBrush}" BorderBrush="{StaticResource MinecraftGrayBrush}" BorderThickness="4" CornerRadius="0">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Image">
+                    <Setter Property="Width" Value="32"/>
+                    <Setter Property="Margin" Value="5,0,10,5"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                </Style>
+                <Style TargetType="Button" BasedOn="{StaticResource MinecraftButtonStyle}">
+                    <Setter Property="Padding" Value="20,7"/>
+                    <Setter Property="FontSize" Value="20"/>
+                </Style>
+            </Grid.Resources>
+
+            <!-- Status images -->
+            <Image x:Name="ErrorIcon" Source="../pictures/error.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Visibility="Hidden"/>
+            <Image x:Name="WarningIcon" Source="../pictures/warning.png" RenderOptions.BitmapScalingMode="NearestNeighbor" Visibility="Hidden"/>
+            
+            <!-- Heading -->
+            <TextBlock Grid.Row="0" Style="{StaticResource MinecraftHeaderStyle}" FontSize="28" Text="{Binding Heading}" d:Text="Nadpis" Padding="50,0"/>
+
+            <!-- Contents -->
+            <TextBlock Grid.Row="1" Style="{StaticResource MinecraftSectionTitleStyle}" FontSize="18" Text="{Binding Message}" d:Text="Libovolná zpráva" Margin="10"/>
+
+            <!-- Buttons -->
+            <StackPanel x:Name="ButtonsPanel" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="OkButton" Content="OK" Click="OkButton_Click"/>
+                <Button x:Name="YesButton" Content="Ano" Click="YesButton_Click" Visibility="Collapsed"/>
+                <Button x:Name="NoButton" Content="Ne" Click="NoButton_Click" Visibility="Collapsed"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
