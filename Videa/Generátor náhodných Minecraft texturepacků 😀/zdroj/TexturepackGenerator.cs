@@ -245,6 +245,8 @@ namespace Minecraft_random_texturepacks
 
         private string? GetPackFormatFromVersion(ReadOnlySpan<char> version)
         {
+            if (!version.StartsWith("1.")) return null;
+
             int beginningIndex = version.IndexOf('.') + 1;
             if (beginningIndex < 0) return null;
             int endIndex = version.Slice(beginningIndex).IndexOf('.');
